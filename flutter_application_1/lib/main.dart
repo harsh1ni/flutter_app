@@ -9,14 +9,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blue[100],
         appBar: AppBar(
-          backgroundColor: Colors.blueGrey[400],
+          backgroundColor: Colors.transparent,
+          elevation: 0,
           centerTitle: true,
           title: Text('LegalEase'),
         ),
-        body: Image(
-          image: AssetImage('images/startingframe.png'),
+        backgroundColor:
+            Colors.white, // Set the scaffold background color as white
+        body: Center(
+          child: Image.asset(
+              'images/lelogo.png'), // Display the "lelogo.png" image in the center
         ),
       ),
     );
