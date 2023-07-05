@@ -5,18 +5,40 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  void onNextButtonPressed() {
+    // Add your logic for the Next button functionality here
+    print('Next button pressed');
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blue[100],
         appBar: AppBar(
-          backgroundColor: Colors.blueGrey[400],
+          backgroundColor: Colors.transparent,
+          elevation: 0,
           centerTitle: true,
           title: Text('LegalEase'),
         ),
-        body: Image(
-          image: AssetImage('images/startingframe.png'),
+        backgroundColor: Colors.white,
+        body: Stack(
+          children: [
+            Center(
+              child: Image.asset('images/lelogo.png'),
+            ),
+            Positioned(
+              bottom: 16,
+              right: 16,
+              child: ElevatedButton(
+                onPressed:
+                    onNextButtonPressed, // Set the onPressed callback to the function you want to execute
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.grey[300],
+                ),
+                child: Text('Next'),
+              ),
+            ),
+          ],
         ),
       ),
     );
