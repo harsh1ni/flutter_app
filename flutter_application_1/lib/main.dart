@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   void onNextButtonPressed() {
     // Add your logic for the Next button functionality here
     print('Next button pressed');
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
           centerTitle: true,
-          title: Text('LegalEase'),
+          title: const Text('LegalEase'),
         ),
         backgroundColor: Colors.white,
         body: Stack(
@@ -33,9 +35,9 @@ class MyApp extends StatelessWidget {
                 onPressed:
                     onNextButtonPressed, // Set the onPressed callback to the function you want to execute
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.grey[300],
+                  backgroundColor: Colors.grey[300],
                 ),
-                child: Text('Next'),
+                child: const Text('Next'),
               ),
             ),
           ],
