@@ -187,6 +187,7 @@ class FourthRoute extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
           //title: const Text('Second Route'),
@@ -205,14 +206,14 @@ class FourthRoute extends StatelessWidget {
             //   ),
             // ),
             //Image(image: AssetImage('images/logo2.png')),
-
-            Expanded(
-              child: Align(
-                alignment: Alignment.topCenter,
-                child: Image.asset('images/logossn110.png'),
+            Container(
+              width: screenSize.width,
+              height: screenSize.height,
+              child: Image(
+                image: AssetImage('images/sss110.png'),
+                fit: BoxFit.cover,
               ),
             ),
-
             Align(
               alignment: Alignment.bottomRight,
               child: ElevatedButton(
