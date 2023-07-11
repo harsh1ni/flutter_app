@@ -154,7 +154,14 @@ class ThirdRoute extends StatelessWidget {
             Align(
               alignment: Alignment.bottomRight,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const FourthRoute()),
+                  );
+                  //fourth route added
+                },
                 child: const Text('Next'),
               ),
             ),
