@@ -222,10 +222,76 @@ class FourthRoute extends StatelessWidget {
               alignment: Alignment.bottomRight,
               child: ElevatedButton(
                 onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const FifthRoute()),
+                  );
+                  //fourth route added
+                },
+                child: const Text('Next'),
+              ),
+            ),
+
+            // ElevatedButton(
+            //   onPressed: () {
+            //     Navigator.pop(context);
+            //   },
+            //   child: const Text('Back'),
+            // ),
+
+            // ElevatedButton(
+            //   onPressed: () {},
+            //   child: const Text('Social Security Form'),
+            // ),
+          ]),
+    );
+  }
+}
+
+class FifthRoute extends StatelessWidget {
+  const FifthRoute({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+          //title: const Text('Second Route'),
+          ),
+      body: Column(
+          mainAxisSize: MainAxisSize.max,
+          //mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Align(
+            //   alignment: Alignment.topLeft,
+            //   child: ElevatedButton(
+            //     onPressed: () {
+            //       Navigator.pop(context);
+            //     },
+            //     child: const Text('Back'),
+            //   ),
+            // ),
+            //Image(image: AssetImage('images/logo2.png')),
+            Container(
+              color: Colors.white,
+              padding: const EdgeInsets.all(20),
+              child: Align(
+                alignment: Alignment.topCenter,
+                child: Image.asset('images/lelogo.png', height: 200),
+              ),
+            ),
+
+            Expanded(
+              flex: 5,
+              child: Image(image: AssetImage('images/ssn1117.png')),
+            ),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: ElevatedButton(
+                onPressed: () {
                   //Navigator.push(
                   //context,
                   // MaterialPageRoute(
-                  /// builder: (context) => const FifthRoute()),
+                  /// builder: (context) => const SixthRoute()),
                   // );
                   //fourth route added
                 },
