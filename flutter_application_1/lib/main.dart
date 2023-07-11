@@ -181,3 +181,61 @@ class ThirdRoute extends StatelessWidget {
     );
   }
 }
+
+class FourthRoute extends StatelessWidget {
+  const FourthRoute({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+          //title: const Text('Second Route'),
+          ),
+      body: Column(
+          mainAxisSize: MainAxisSize.max,
+          //mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Align(
+            //   alignment: Alignment.topLeft,
+            //   child: ElevatedButton(
+            //     onPressed: () {
+            //       Navigator.pop(context);
+            //     },
+            //     child: const Text('Back'),
+            //   ),
+            // ),
+            Image(image: AssetImage('images/logo2.png')),
+
+            Expanded(
+              child: Image(image: AssetImage('images/ssn110.png')),
+            ),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: ElevatedButton(
+                onPressed: () {
+                  //Navigator.push(
+                  //context,
+                  // MaterialPageRoute(
+                  /// builder: (context) => const FifthRoute()),
+                  // );
+                  //fourth route added
+                },
+                child: const Text('Next'),
+              ),
+            ),
+
+            // ElevatedButton(
+            //   onPressed: () {
+            //     Navigator.pop(context);
+            //   },
+            //   child: const Text('Back'),
+            // ),
+
+            // ElevatedButton(
+            //   onPressed: () {},
+            //   child: const Text('Social Security Form'),
+            // ),
+          ]),
+    );
+  }
+}
