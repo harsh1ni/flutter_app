@@ -204,9 +204,18 @@ class FourthRoute extends StatelessWidget {
             //     child: const Text('Back'),
             //   ),
             // ),
-            Image(image: AssetImage('images/logo2.png')),
+            //Image(image: AssetImage('images/logo2.png')),
+            Container(
+              color: Colors.white,
+              padding: const EdgeInsets.all(20),
+              child: Align(
+                alignment: Alignment.topCenter,
+                child: Image.asset('images/lelogo.png', height: 200),
+              ),
+            ),
 
             Expanded(
+              flex: 5,
               child: Image(image: AssetImage('images/ssn110.png')),
             ),
             Align(
