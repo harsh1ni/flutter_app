@@ -4,13 +4,29 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+void navigateToSecond(BuildContext context) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const SecondRoute()),
+  );
+}
 
-  void onNextButtonPressed() {
-    // Add your logic for the Next button functionality here
-    print('Next button pressed');
-  }
+void navigateToThird(BuildContext context) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const ThirdRoute()),
+  );
+}
+
+void navigateToFourth(BuildContext context) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const FourthRoute()),
+  );
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +48,7 @@ class MyApp extends StatelessWidget {
               bottom: 16,
               right: 16,
               child: ElevatedButton(
-                onPressed:
-                    onNextButtonPressed, // Set the onPressed callback to the function you want to execute
+                onPressed: () => navigateToSecond(context),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.grey[300],
                 ),
@@ -48,113 +63,70 @@ class MyApp extends StatelessWidget {
 }
 
 class SecondRoute extends StatelessWidget {
-  const SecondRoute({super.key});
+  const SecondRoute({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          //title: const Text('Second Route'),
-          ),
+      appBar: AppBar(),
       body: Column(
-          mainAxisSize: MainAxisSize.max,
-          //mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // ElevatedButton(
-            //   onPressed: () {
-            //     Navigator.pop(context);
-            //   },
-            //   child: const Text('Back'),
-            // ),
-
-            // ElevatedButton(
-            //   onPressed: () {
-            //     Navigator.pop(context);
-            //   },
-            //   child: const Text('Back'),
-            // ),
-
-            Image(image: AssetImage('images/logo2.png')),
-
-            // Image(image: AssetImage('images/logo.png')),
-
-            //Image(image: AssetImage('images/WelcomeLegal.png')),
-
-            Align(
-              alignment: Alignment.center,
-              child: Image(image: AssetImage('images/WelcomeLegal.png')),
-            ),
-
-            Text('     '),
-
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const ThirdRoute()),
-                );
-                //Navigator.push(context.MaterialPageRoute(builder:(context)=>seconscreen))
-              },
-              child: const Text('Social Security Form'),
-            ),
-
-            // ElevatedButton(
-            //   onPressed: () {},
-            //   child: const Text('Social Security Form'),
-            // ),
-          ]),
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Image(image: AssetImage('images/logo2.png')),
+          Align(
+            alignment: Alignment.center,
+            child: Image(image: AssetImage('images/WelcomeLegal.png')),
+          ),
+          Text('     '),
+          ElevatedButton(
+            onPressed: () => navigateToThird(context),
+            child: const Text('Social Security Form'),
+          ),
+        ],
+      ),
     );
   }
 }
 
 class ThirdRoute extends StatelessWidget {
-  const ThirdRoute({super.key});
+  const ThirdRoute({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          //title: const Text('Second Route'),
-          ),
+      appBar: AppBar(),
       body: Column(
-          mainAxisSize: MainAxisSize.max,
-          //mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Align(
-            //   alignment: Alignment.topLeft,
-            //   child: ElevatedButton(
-            //     onPressed: () {
-            //       Navigator.pop(context);
-            //     },
-            //     child: const Text('Back'),
-            //   ),
-            // ),
-            Expanded(
-              child: Image(image: AssetImage('images/sstop.png')),
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Expanded(
+            child: Image(image: AssetImage('images/sstop.png')),
+          ),
+          Expanded(
+            child: Image(image: AssetImage('images/ssbottom.png')),
+          ),
+          Align(
+            alignment: Alignment.bottomRight,
+            child: ElevatedButton(
+              onPressed: () => navigateToFourth(context),
+              child: const Text('Next'),
             ),
-            Expanded(
-              child: Image(image: AssetImage('images/ssbottom.png')),
-            ),
-            Align(
-              alignment: Alignment.bottomRight,
-              child: ElevatedButton(
-                onPressed: () {},
-                child: const Text('Next'),
-              ),
-            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
 
-            // ElevatedButton(
-            //   onPressed: () {
-            //     Navigator.pop(context);
-            //   },
-            //   child: const Text('Back'),
-            // ),
+class FourthRoute extends StatelessWidget {
+  const FourthRoute({Key? key}) : super(key: key);
 
-            // ElevatedButton(
-            //   onPressed: () {},
-            //   child: const Text('Social Security Form'),
-            // ),
-          ]),
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      body: Center(
+        child: Text('Fourth Route'),
+      ),
     );
   }
 }
