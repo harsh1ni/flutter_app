@@ -207,13 +207,9 @@ class FourthRoute extends StatelessWidget {
             // ),
             //Image(image: AssetImage('images/logo2.png')),
             Container(
-              width: screenSize.width,
-              height: screenSize.height,
-              child: Image(
-                image: AssetImage('images/sss110.png'),
-                fit: BoxFit.cover,
-              ),
+              child: Image.asset('images/sss110.png'),
             ),
+
             Align(
               alignment: Alignment.bottomRight,
               child: ElevatedButton(
