@@ -205,19 +205,14 @@ class FourthRoute extends StatelessWidget {
             //   ),
             // ),
             //Image(image: AssetImage('images/logo2.png')),
-            Container(
-              color: Colors.white,
-              padding: const EdgeInsets.all(20),
+
+            Expanded(
               child: Align(
                 alignment: Alignment.topCenter,
-                child: Image.asset('images/lelogo.png', height: 200),
+                child: Image.asset('images/logossn110.png'),
               ),
             ),
 
-            Expanded(
-              flex: 5,
-              child: Image(image: AssetImage('images/ssn110.png')),
-            ),
             Align(
               alignment: Alignment.bottomRight,
               child: ElevatedButton(
@@ -271,14 +266,6 @@ class FifthRoute extends StatelessWidget {
             //   ),
             // ),
             //Image(image: AssetImage('images/logo2.png')),
-            Container(
-              color: Colors.white,
-              padding: const EdgeInsets.all(20),
-              child: Align(
-                alignment: Alignment.topCenter,
-                child: Image.asset('images/lelogo.png', height: 200),
-              ),
-            ),
 
             Expanded(
               flex: 5,
