@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
         ),
-        home: MyHomePage(),
+        home: const MyHomePage(),
       ),
     );
   }
@@ -30,6 +30,8 @@ class MyAppState extends ChangeNotifier {
 }
 
 class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     //var appState = context.watch<MyAppState>();
@@ -46,7 +48,7 @@ class MyHomePage extends StatelessWidget {
           // Text('LEAGALEASE:'),
           //Text(appState.current.asLowerCase),
 
-          Image(image: AssetImage('images/logo1.png')),
+          const Image(image: AssetImage('images/logo1.png')),
           ElevatedButton(
             onPressed: () {
               Navigator.push(
@@ -55,7 +57,7 @@ class MyHomePage extends StatelessWidget {
               );
               //Navigator.push(context.MaterialPageRoute(builder:(context)=>seconscreen))
             },
-            child: Text('Lets get started!'),
+            child: const Text('Lets get started!'),
           ),
         ],
       ),
@@ -90,18 +92,18 @@ class SecondRoute extends StatelessWidget {
             //   child: const Text('Back'),
             // ),
 
-            Image(image: AssetImage('images/logo2.png')),
+            const Image(image: AssetImage('images/logo2.png')),
 
             // Image(image: AssetImage('images/logo.png')),
 
             //Image(image: AssetImage('images/WelcomeLegal.png')),
 
-            Align(
+            const Align(
               alignment: Alignment.center,
               child: Image(image: AssetImage('images/WelcomeLegal.png')),
             ),
 
-            Text('     '),
+            const Text('     '),
 
             ElevatedButton(
               onPressed: () {
@@ -145,10 +147,10 @@ class ThirdRoute extends StatelessWidget {
             //     child: const Text('Back'),
             //   ),
             // ),
-            Expanded(
+            const Expanded(
               child: Image(image: AssetImage('images/sstop.png')),
             ),
-            Expanded(
+            const Expanded(
               child: Image(image: AssetImage('images/ssbottom.png')),
             ),
             Align(
@@ -196,7 +198,6 @@ class FourthRoute extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           //mainAxisAlignment: MainAxisAlignment.center,
           children: [
-           Align(
             //   alignment: Alignment.topLeft,
             //   child: ElevatedButton(
             //     onPressed: () {
@@ -264,7 +265,7 @@ class FifthRoute extends StatelessWidget {
             // ),
             //Image(image: AssetImage('images/logo2.png')),
 
-            Expanded(
+            const Expanded(
               flex: 5,
               child: Image(image: AssetImage('images/ssn1117.png')),
             ),
