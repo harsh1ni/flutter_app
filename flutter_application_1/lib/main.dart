@@ -207,7 +207,7 @@ class FourthRoute extends StatelessWidget {
             //   ),
             // ),
             //Image(image: AssetImage('images/logo2.png')),
-            Container(
+            Expanded(
               child: Image.asset('images/sss110.png'),
             ),
 
