@@ -92,7 +92,7 @@ class SecondRoute extends StatelessWidget {
             //   child: const Text('Back'),
             // ),
 
-            const Image(image: AssetImage('images/logo2.png')),
+            const Image(image: AssetImage('assets/images/logo2.png')),
 
             // Image(image: AssetImage('images/logo.png')),
 
@@ -100,7 +100,7 @@ class SecondRoute extends StatelessWidget {
 
             const Align(
               alignment: Alignment.center,
-              child: Image(image: AssetImage('images/WelcomeLegal.png')),
+              child: Image(image: AssetImage('assets/images/WelcomeLegal.png')),
             ),
 
             const Text('     '),
@@ -148,10 +148,10 @@ class ThirdRoute extends StatelessWidget {
             //   ),
             // ),
             const Expanded(
-              child: Image(image: AssetImage('images/sstop.png')),
+              child: Image(image: AssetImage('assets/images/sstop.png')),
             ),
             const Expanded(
-              child: Image(image: AssetImage('images/ssbottom.png')),
+              child: Image(image: AssetImage('assets/images/ssbottom.png')),
             ),
             Align(
               alignment: Alignment.bottomRight,
@@ -208,7 +208,7 @@ class FourthRoute extends StatelessWidget {
             // ),
             //Image(image: AssetImage('images/logo2.png')),
             Expanded(
-              child: Image.asset('images/sss110.png'),
+              child: Image.asset('assets/images/sss110.png'),
             ),
 
             Align(
@@ -267,7 +267,7 @@ class FifthRoute extends StatelessWidget {
 
             const Expanded(
               flex: 5,
-              child: Image(image: AssetImage('images/ssn1117.png')),
+              child: Image(image: AssetImage('assets/images/ssn1117.png')),
             ),
             Align(
               alignment: Alignment.bottomRight,
