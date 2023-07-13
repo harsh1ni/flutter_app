@@ -48,7 +48,7 @@ class MyHomePage extends StatelessWidget {
           // Text('LEAGALEASE:'),
           //Text(appState.current.asLowerCase),
 
-          const Image(image: AssetImage('images/logo1.png')),
+          const Image(image: AssetImage('assets/images/logo1.png')),
           ElevatedButton(
             onPressed: () {
               Navigator.push(
