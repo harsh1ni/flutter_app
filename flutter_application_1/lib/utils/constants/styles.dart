@@ -104,3 +104,10 @@ var reviewGuideText = Text("Review guide again",
     style: GoogleFonts.martel(
         textStyle: const TextStyle(
             fontSize: 15, fontWeight: FontWeight.normal, color: darkGrey)));
+
+//Let's get started button for welcome screen
+//Review guide again button
+var letsGetStarted = Text("Let's Get Started!",
+    style: GoogleFonts.martel(
+        textStyle: const TextStyle(
+            fontSize: 15, fontWeight: FontWeight.normal, color: darkGrey)));
