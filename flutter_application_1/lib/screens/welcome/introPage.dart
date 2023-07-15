@@ -10,6 +10,13 @@ class welcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Body());
+    return Scaffold(
+      body: Column(
+        children: [
+          Body(), // Use the Body widget
+          // IntroButton(), // Use the IntroButton widget
+        ],
+      ),
+    );
   }
 }
