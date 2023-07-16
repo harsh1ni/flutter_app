@@ -58,7 +58,7 @@ var backText = Text("Back",
             fontSize: 14, fontWeight: FontWeight.normal, color: darkGrey)));
 
 //Help button
-var helpText = Text("Next",
+var helpText = Text("?",
     style: GoogleFonts.montserrat(
         textStyle: const TextStyle(
             fontSize: 23, fontWeight: FontWeight.bold, color: black)));
