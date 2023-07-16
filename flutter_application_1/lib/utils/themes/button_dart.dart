@@ -130,7 +130,7 @@ class HelpButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         padding: EdgeInsets.all(0),
         shape: CircleBorder(),
-        primary: Colors.black,
+        primary: black,
       ),
       child: Container(
         width: 40,
@@ -138,9 +138,80 @@ class HelpButton extends StatelessWidget {
         alignment: Alignment.center,
         child: Icon(
           Icons.help,
-          color: Colors.white,
+          color: white,
         ),
       ),
     );
   }
 }
+
+//Class Definition for Social Security Form button 
+class SocialSecurityForm extends StatelessWidget {
+  const SocialSecurityForm({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(29),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 60),
+          primary: white,
+          onPrimary: darkGrey,
+        ),
+        onPressed: () {
+          // Handle button press
+        },
+        child: socialSecurityText,
+      ),
+    );
+  }
+}
+
+//Class definition for Return to home page button
+class ReturnToHome extends StatelessWidget {
+  const ReturnToHome({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(29),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 60),
+          primary: white,
+          onPrimary: darkGrey,
+        ),
+        onPressed: () {
+          // Handle button press
+        },
+        child: returnToHomeText,
+      ),
+    );
+  }
+}
+
+//Class definition for Review guide again button 
+class ReviewGuideAgain extends StatelessWidget {
+  const ReviewGuideAgain({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(29),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 60),
+          primary: white,
+          onPrimary: darkGrey,
+        ),
+        onPressed: () {
+          // Handle button press
+        },
+        child: reviewGuideAgain,
+      ),
+    );
+  }
+}
+
+//Spanish Versions of the long text buttons (Have Sky update those)
