@@ -49,16 +49,16 @@ var reviewGuideAgain = Text(
 var nextText = Text("Next",
     style: GoogleFonts.montserrat(
         textStyle: const TextStyle(
-            fontSize: 14, fontWeight: FontWeight.normal, color: darkGrey)));
+            fontSize: 14, fontWeight: FontWeight.normal, color: white)));
 
 //Back button text style
 var backText = Text("Back",
     style: GoogleFonts.montserrat(
         textStyle: const TextStyle(
-            fontSize: 14, fontWeight: FontWeight.normal, color: darkGrey)));
+            fontSize: 14, fontWeight: FontWeight.normal, color: white)));
 
 //Help button
-var helpText = Text("Next",
+var helpText = Text("?",
     style: GoogleFonts.montserrat(
         textStyle: const TextStyle(
             fontSize: 23, fontWeight: FontWeight.bold, color: black)));
