@@ -5,6 +5,7 @@ import 'package:flutter_application_1/utils/constants/spaces.dart';
 import 'package:flutter_application_1/utils/constants/styles.dart';
 import 'package:flutter/material.dart';
 
+//Class definition for homeScreen
 class homeScreen extends StatelessWidget {
   const homeScreen({super.key});
 
@@ -14,7 +15,6 @@ class homeScreen extends StatelessWidget {
       body: Column(
         children: [
           homeBody(), // Use the Body widget
-          // IntroButton(), // Use the IntroButton widget
         ],
       ),
     );

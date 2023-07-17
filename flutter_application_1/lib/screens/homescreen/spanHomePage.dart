@@ -6,6 +6,7 @@ import 'package:flutter_application_1/utils/constants/spaces.dart';
 import 'package:flutter_application_1/utils/constants/styles.dart';
 import 'package:flutter/material.dart';
 
+//Class definition for spanHomeScreen
 class spanHomeScreen extends StatelessWidget {
   const spanHomeScreen({super.key});
 
@@ -15,7 +16,6 @@ class spanHomeScreen extends StatelessWidget {
       body: Column(
         children: [
           spanHomeBody(), // Use the Body widget
-          // IntroButton(), // Use the IntroButton widget
         ],
       ),
     );
