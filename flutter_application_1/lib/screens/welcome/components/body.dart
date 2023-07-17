@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/screens/homescreen/homePage.dart';
 import 'package:flutter_application_1/utils/constants/colors.dart';
 import 'package:flutter_application_1/utils/constants/styles.dart';
 import 'package:flutter_application_1/utils/themes/button_dart.dart';
@@ -21,7 +22,14 @@ class Body extends StatelessWidget {
             alignment: Alignment.bottomRight,
             child: Padding(
               padding: EdgeInsets.all(20.0),
-              child: NextButton(),
+              child: NextButton(
+                nextText: 'Next',
+                onPressed: () {
+                  // You can handle any additional logic here
+                },
+                destinationScreen:
+                    homeScreen(), // Replace HomeScreen() with the desired screen widget
+              ),
             ),
           ),
         ],

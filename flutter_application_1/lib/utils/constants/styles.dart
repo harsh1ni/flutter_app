@@ -6,7 +6,8 @@ import 'colors.dart';
 //Captions used in Narrow Scope
 //Home page intro text
 var welcomeText = Text(
-    "Welcome to LegalEase! Would you like to view a guide of instructions pertaining to the Social Security Form?",
+    "Welcome to LegalEase! Select the button to view a guide of instructions pertaining to the Social Security Form.",
+    textAlign: TextAlign.center,
     style: GoogleFonts.martel(
         textStyle: const TextStyle(
             fontSize: 17, fontWeight: FontWeight.normal, color: black)));
