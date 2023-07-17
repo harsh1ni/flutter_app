@@ -4,6 +4,7 @@ import 'package:flutter_application_1/utils/constants/colors.dart';
 import 'package:flutter_application_1/utils/constants/styles.dart';
 import 'package:flutter_application_1/utils/themes/button_dart.dart';
 
+//Class definition for homeBody
 class homeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -16,22 +17,21 @@ class homeBody extends StatelessWidget {
         children: [
           Align(
             child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              // Align(
-              // alignment: Alignment.topCenter,
-              Image.asset('assets/icons/lelogo.png'),
-              // ),
-              SizedBox(
-                  height:
-                      10), // Add spacing between the image and the welcomeText
-              welcomeText,
-              SizedBox(height: 30),
-              SocialSecurityForm(),
-            ],
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                // Align(
+                // alignment: Alignment.topCenter,
+                Image.asset('assets/icons/lelogo.png'),
+                // ),
+                SizedBox(
+                  height: 10,
+                ), // Add spacing between the image and the welcomeText
+                welcomeText,
+                SizedBox(height: 30),
+                SocialSecurityForm(),
+              ],
+            ),
           ),
-          )
-        ],
           // Align(
           //     alignment: Alignment.bottomCenter,
           //     child: Column(
