@@ -2,9 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/utils/constants/colors.dart';
 import 'package:flutter_application_1/utils/constants/styles.dart';
 
-//Class definition for the Next Button 
+//Class definition for the Next Button
+// class NextButton extends StatelessWidget {
+//   const NextButton({Key? key}) : super(key: key);
+
+//   @override
+// //   Widget build(BuildContext context) {
+// //     return ClipRRect(
+// //       borderRadius: BorderRadius.circular(29),
+// //       child: ElevatedButton(
+// //         style: ElevatedButton.styleFrom(
+// //           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+// //           primary: lightGrey,
+// //           onPrimary: darkGrey,
+// //         ),
+// //         onPressed: () {
+// //           // Handle button press
+// //         },
+// //         child: nextText,
+// //       ),
+// //     );
+// //   }
+// // }
+
+//Chatgpt version of reusable next button
 class NextButton extends StatelessWidget {
-  const NextButton({Key? key}) : super(key: key);
+  final String nextText;
+  final Function onPressed;
+  final Widget destinationScreen;
+
+  NextButton({
+    required this.nextText,
+    required this.onPressed,
+    required this.destinationScreen,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,17 +48,21 @@ class NextButton extends StatelessWidget {
           onPrimary: darkGrey,
         ),
         onPressed: () {
-          // Handle button press
+          // Navigate to the specified destinationScreen when the button is pressed
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => destinationScreen),
+          );
         },
-        child: nextText,
+        child: Text(nextText),
       ),
     );
   }
 }
 
-//Class definition for the back button 
-class BackButton extends StatelessWidget {
-  const BackButton({Key? key}) : super(key: key);
+//Class definition for the back button
+class CustomBackButton extends StatelessWidget {
+  const CustomBackButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +83,7 @@ class BackButton extends StatelessWidget {
   }
 }
 
-//Class Definition for the Espanol language changing button 
+//Class Definition for the Espanol language changing button
 class EspanolButton extends StatelessWidget {
   const EspanolButton({Key? key}) : super(key: key);
 
@@ -71,7 +106,7 @@ class EspanolButton extends StatelessWidget {
   }
 }
 
-//Class definition for the English language changing button 
+//Class definition for the English language changing button
 class EnglishButton extends StatelessWidget {
   const EnglishButton({Key? key}) : super(key: key);
 
@@ -94,7 +129,7 @@ class EnglishButton extends StatelessWidget {
   }
 }
 
-//Class definition for the spanish download button 
+//Class definition for the spanish download button
 class DescargarButton extends StatelessWidget {
   const DescargarButton({Key? key}) : super(key: key);
 
@@ -117,7 +152,7 @@ class DescargarButton extends StatelessWidget {
   }
 }
 
-//Class definition 
+//Class definition
 class HelpButton extends StatelessWidget {
   const HelpButton({Key? key}) : super(key: key);
 
@@ -145,7 +180,7 @@ class HelpButton extends StatelessWidget {
   }
 }
 
-//Class Definition for Social Security Form button 
+//Class Definition for Social Security Form button
 class SocialSecurityForm extends StatelessWidget {
   const SocialSecurityForm({Key? key}) : super(key: key);
 
@@ -191,7 +226,7 @@ class ReturnToHome extends StatelessWidget {
   }
 }
 
-//Class definition for Review guide again button 
+//Class definition for Review guide again button
 class ReviewGuideAgain extends StatelessWidget {
   const ReviewGuideAgain({Key? key}) : super(key: key);
 
