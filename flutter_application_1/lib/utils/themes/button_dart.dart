@@ -191,7 +191,7 @@ class SocialSecurityForm extends StatelessWidget {
       borderRadius: BorderRadius.circular(29),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 60),
+          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 90),
           primary: white,
           onPrimary: darkGrey,
           side: BorderSide(color: darkGrey), // Set the border color here

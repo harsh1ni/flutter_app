@@ -16,32 +16,28 @@ class homeBody extends StatelessWidget {
       child: Stack(
         children: [
           Align(
+            alignment: Alignment.topCenter,
+            child: Padding(
+              padding: EdgeInsets.only(top: 12.0),
+              child: Image.asset(
+                'assets/icons/lelogo.png',
+                height: 420, // Adjust the height of the image
+                fit: BoxFit.contain, // Adjust the fit of the image
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.center,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Align(
-                // alignment: Alignment.topCenter,
-                Image.asset('assets/icons/lelogo.png'),
-                // ),
-                SizedBox(
-                  height: 10,
-                ), // Add spacing between the image and the welcomeText
+                SizedBox(height: 80),
                 welcomeText,
                 SizedBox(height: 30),
                 SocialSecurityForm(),
               ],
             ),
           ),
-          // Align(
-          //     alignment: Alignment.bottomCenter,
-          //     child: Column(
-          //       mainAxisAlignment: MainAxisAlignment.center,
-          //       children: [
-          //         SizedBox(height: 30),
-          //         SocialSecurityForm(),
-          //       ],
-          //     )
-          //     ),
           Align(
             alignment: Alignment.bottomRight,
             child: Padding(
