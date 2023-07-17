@@ -113,12 +113,12 @@ class CustomBackButton extends StatelessWidget {
 
 //Chatgpt's reusable version of the espanolButton
 class EspanolButton extends StatelessWidget {
-  final String buttonText;
+  final String espanolText;
   final Function onPressed;
   final Widget destinationScreen;
 
   EspanolButton({
-    required this.buttonText,
+    required this.espanolText,
     required this.onPressed,
     required this.destinationScreen,
   });
@@ -131,7 +131,7 @@ class EspanolButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
           primary: black,
-          onPrimary: black,
+          onPrimary: white,
         ),
         onPressed: () {
           // Navigate to the specified destinationScreen when the button is pressed
@@ -140,7 +140,7 @@ class EspanolButton extends StatelessWidget {
             MaterialPageRoute(builder: (context) => destinationScreen),
           );
         },
-        child: Text(buttonText),
+        child: Text(espanolText),
       ),
     );
   }
@@ -172,12 +172,12 @@ class EspanolButton extends StatelessWidget {
 
 //Chatgpt's reusable version of the English button
 class EnglishButton extends StatelessWidget {
-  final String buttonText;
+  final String englishText;
   final Function onPressed;
   final Widget destinationScreen;
 
   EnglishButton({
-    required this.buttonText,
+    required this.englishText,
     required this.onPressed,
     required this.destinationScreen,
   });
@@ -190,7 +190,7 @@ class EnglishButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
           primary: black,
-          onPrimary: black,
+          onPrimary: white,
         ),
         onPressed: () {
           // Navigate to the specified destinationScreen when the button is pressed
@@ -199,7 +199,7 @@ class EnglishButton extends StatelessWidget {
             MaterialPageRoute(builder: (context) => destinationScreen),
           );
         },
-        child: Text(buttonText),
+        child: Text(englishText),
       ),
     );
   }
