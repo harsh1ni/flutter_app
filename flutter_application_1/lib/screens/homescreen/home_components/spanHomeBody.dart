@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/homescreen/home_components/spanHomeBody.dart';
 import 'package:flutter_application_1/screens/ssnintro/ssnintro.dart';
 import 'package:flutter_application_1/utils/constants/colors.dart';
 import 'package:flutter_application_1/utils/constants/styles.dart';
 import 'package:flutter_application_1/utils/themes/button_dart.dart';
 
 //Class definition for homeBody
-class homeBody extends StatelessWidget {
+class spanHomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -71,19 +70,7 @@ class homeBody extends StatelessWidget {
             alignment: Alignment.bottomLeft,
             child: Padding(
               padding: EdgeInsets.all(20.0),
-              child: EspanolButton(
-                buttonText: 'Español', // Replace with the desired button text
-                onPressed: () {
-                  // Handle button press, e.g., navigate to the desired screen
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => spanHomeBody(), // Replace EspanolScreen() with the desired screen widget
-                    ),
-                  );
-                },
-                destinationScreen: spanHomeBody()), // Replace EspanolScreen() with the desired screen widget
-              ),
+              child: EnglishButton(),
             ),
           ),
         ],

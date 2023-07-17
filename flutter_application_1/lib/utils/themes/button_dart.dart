@@ -89,8 +89,39 @@ class CustomBackButton extends StatelessWidget {
 
 //Class Definition for the Espanol language changing button
 //Modify this button to be more like the next button
+// class EspanolButton extends StatelessWidget {
+//   const EspanolButton({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return ClipRRect(
+//       borderRadius: BorderRadius.circular(29),
+//       child: ElevatedButton(
+//         style: ElevatedButton.styleFrom(
+//           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+//           primary: black,
+//           onPrimary: black,
+//         ),
+//         onPressed: () {
+//           // Handle button press
+//         },
+//         child: espanolText,
+//       ),
+//     );
+//   }
+// }
+
+//Chatgpt's reusable version of the espanolButton
 class EspanolButton extends StatelessWidget {
-  const EspanolButton({Key? key}) : super(key: key);
+  final String buttonText;
+  final Function onPressed;
+  final Widget destinationScreen;
+
+  EspanolButton({
+    required this.buttonText,
+    required this.onPressed,
+    required this.destinationScreen,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -103,9 +134,13 @@ class EspanolButton extends StatelessWidget {
           onPrimary: black,
         ),
         onPressed: () {
-          // Handle button press
+          // Navigate to the specified destinationScreen when the button is pressed
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => destinationScreen),
+          );
         },
-        child: espanolText,
+        child: Text(buttonText),
       ),
     );
   }
@@ -113,8 +148,39 @@ class EspanolButton extends StatelessWidget {
 
 //Class definition for the English language changing button
 //Modify the English Button ot be more like the next button
+// class EnglishButton extends StatelessWidget {
+//   const EnglishButton({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return ClipRRect(
+//       borderRadius: BorderRadius.circular(29),
+//       child: ElevatedButton(
+//         style: ElevatedButton.styleFrom(
+//           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+//           primary: black,
+//           onPrimary: black,
+//         ),
+//         onPressed: () {
+//           // Handle button press
+//         },
+//         child: englishText,
+//       ),
+//     );
+//   }
+// }
+
+//Chatgpt's reusable version of the English button
 class EnglishButton extends StatelessWidget {
-  const EnglishButton({Key? key}) : super(key: key);
+  final String buttonText;
+  final Function onPressed;
+  final Widget destinationScreen;
+
+  EnglishButton({
+    required this.buttonText,
+    required this.onPressed,
+    required this.destinationScreen,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -127,9 +193,13 @@ class EnglishButton extends StatelessWidget {
           onPrimary: black,
         ),
         onPressed: () {
-          // Handle button press
+          // Navigate to the specified destinationScreen when the button is pressed
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => destinationScreen),
+          );
         },
-        child: englishText,
+        child: Text(buttonText),
       ),
     );
   }
