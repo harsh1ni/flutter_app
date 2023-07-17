@@ -181,6 +181,7 @@ class HelpButton extends StatelessWidget {
 }
 
 //Class Definition for Social Security Form button
+//Make this navigate to SSN Intro Screen
 class SocialSecurityForm extends StatelessWidget {
   const SocialSecurityForm({Key? key}) : super(key: key);
 
@@ -193,6 +194,8 @@ class SocialSecurityForm extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 30, horizontal: 60),
           primary: white,
           onPrimary: darkGrey,
+          side: BorderSide(color: darkGrey), // Set the border color here
+          shape: StadiumBorder(),
         ),
         onPressed: () {
           // Handle button press
@@ -204,6 +207,7 @@ class SocialSecurityForm extends StatelessWidget {
 }
 
 //Class definition for Return to home page button
+//Edit this to make it navigate to homeScreen
 class ReturnToHome extends StatelessWidget {
   const ReturnToHome({Key? key}) : super(key: key);
 

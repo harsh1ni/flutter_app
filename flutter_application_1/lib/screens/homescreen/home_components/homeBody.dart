@@ -15,17 +15,33 @@ class homeBody extends StatelessWidget {
       child: Stack(
         children: [
           Align(
-            alignment: Alignment.topCenter,
-            child: Image.asset('assets/icons/lelogo.png'),
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              // Align(
+              // alignment: Alignment.topCenter,
+              Image.asset('assets/icons/lelogo.png'),
+              // ),
+              SizedBox(
+                  height:
+                      10), // Add spacing between the image and the welcomeText
+              welcomeText,
+              SizedBox(height: 30),
+              SocialSecurityForm(),
+            ],
           ),
-          Align(
-            alignment: Alignment.center,
-            child: welcomeText,
-          ),
-          Align(
-              alignment: Alignment.bottomCenter,
-              child: Padding(
-                  padding: EdgeInsets.all(20.0), child: SocialSecurityForm())),
+          )
+        ],
+          // Align(
+          //     alignment: Alignment.bottomCenter,
+          //     child: Column(
+          //       mainAxisAlignment: MainAxisAlignment.center,
+          //       children: [
+          //         SizedBox(height: 30),
+          //         SocialSecurityForm(),
+          //       ],
+          //     )
+          //     ),
           Align(
             alignment: Alignment.bottomRight,
             child: Padding(
@@ -52,6 +68,13 @@ class homeBody extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.all(20.0),
               child: HelpButton(),
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomLeft,
+            child: Padding(
+              padding: EdgeInsets.all(20.0),
+              child: EspanolButton(),
             ),
           ),
         ],
