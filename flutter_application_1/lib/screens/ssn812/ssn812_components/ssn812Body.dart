@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/homescreen/home_components/spanHomeBody.dart';
 import 'package:flutter_application_1/screens/ssn1317/ssn1317.dart';
 import 'package:flutter_application_1/screens/ssn16/spanSsn16.dart';
-import 'package:flutter_application_1/screens/ssn812/ssn812.dart';
+import 'package:flutter_application_1/screens/ssn812/spanSsn812.dart';
 import 'package:flutter_application_1/screens/ssnintro/spanSsnIntro.dart';
 import 'package:flutter_application_1/screens/ssnintro/ssnintro.dart';
 import 'package:flutter_application_1/utils/constants/colors.dart';
@@ -11,7 +11,7 @@ import 'package:flutter_application_1/utils/themes/button_dart.dart';
 
 //Class definition for homeBody
 //will have five images
-class ssn16Body extends StatelessWidget {
+class ssn812Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -59,7 +59,7 @@ class ssn16Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(top: 3.0),
                     child: Image.asset(
-                      'assets/images/ssnt1.png',
+                      'assets/images/ssnt8.png',
                       height: 120, // Adjust the height of the image
                       fit: BoxFit.contain, // Adjust the fit of the image
                     ),
@@ -71,8 +71,8 @@ class ssn16Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(top: 0.25),
                     child: Image.asset(
-                      'assets/images/ssnt2.png',
-                      height: 120, // Adjust the height of the image
+                      'assets/images/ssnt9.png',
+                      height: 138, // Adjust the height of the image
                       fit: BoxFit.contain, // Adjust the fit of the image
                     ),
                   ),
@@ -83,7 +83,7 @@ class ssn16Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(top: 0.25),
                     child: Image.asset(
-                      'assets/images/ssnt3.png',
+                      'assets/images/ssnt10.png',
                       height: 120, // Adjust the height of the image
                       fit: BoxFit.contain, // Adjust the fit of the image
                     ),
@@ -95,8 +95,8 @@ class ssn16Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(top: 1.0),
                     child: Image.asset(
-                      'assets/images/ssnt5.png',
-                      height: 120, // Adjust the height of the image
+                      'assets/images/ssnt11.png',
+                      height: 140, // Adjust the height of the image
                       fit: BoxFit.contain, // Adjust the fit of the image
                     ),
                   ),
@@ -107,7 +107,7 @@ class ssn16Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(top: 1.0),
                     child: Image.asset(
-                      'assets/images/ssnt6.png',
+                      'assets/images/ssnt12.png',
                       height: 140, // Adjust the height of the image
                       fit: BoxFit.contain, // Adjust the fit of the image
                     ),
@@ -126,7 +126,7 @@ class ssn16Body extends StatelessWidget {
                   // You can handle any additional logic here
                 },
                 destinationScreen:
-                    ssn812(), // Replace HomeScreen() with the desired screen widget
+                    ssn1317(), // Replace HomeScreen() with the desired screen widget
               ),
             ),
           ),
@@ -156,12 +156,12 @@ class ssn16Body extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
-                          spanSsn16(), // Replace EspanolScreen() with the desired screen widget
+                          spanSsn812(), // Replace EspanolScreen() with the desired screen widget
                     ),
                   );
                 },
                 destinationScreen:
-                    spanSsn16(), // Replace EspanolScreen() with the desired screen widget
+                    spanSsn812(), // Replace EspanolScreen() with the desired screen widget
               ),
             ),
           ),

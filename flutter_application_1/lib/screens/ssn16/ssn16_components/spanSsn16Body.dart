@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/homescreen/home_components/spanHomeBody.dart';
+import 'package:flutter_application_1/screens/ssn1317/spanSsn1317.dart';
 import 'package:flutter_application_1/screens/ssn16/ssn16.dart';
+import 'package:flutter_application_1/screens/ssn812/spanSsn812.dart';
 import 'package:flutter_application_1/screens/ssnintro/spanSsnIntro.dart';
 import 'package:flutter_application_1/screens/ssnintro/ssnintro.dart';
 import 'package:flutter_application_1/utils/constants/colors.dart';
@@ -18,35 +20,94 @@ class spanSsn16Body extends StatelessWidget {
       color: white,
       child: Stack(
         children: [
+          // Align(
+          //   alignment: Alignment.topCenter,
+          //   child: Padding(
+          //     padding: EdgeInsets.only(top: 3.0),
+          //     child: Image.asset(
+          //       'assets/icons/lelogo.png',
+          //       height: 220, // Adjust the height of the image
+          //       fit: BoxFit.contain, // Adjust the fit of the image
+          //     ),
+          //   ),
+          // ),
           Align(
             alignment: Alignment.topCenter,
             child: Column(
-              //mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 100),
-                introTerms,
-                SizedBox(height: 5),
                 Align(
-                  alignment: Alignment.center,
+                  alignment: Alignment.topCenter,
                   child: Padding(
-                    padding: EdgeInsets.only(top: 6.0),
+                    padding: EdgeInsets.only(top: 1.0),
                     child: Image.asset(
-                      'assets/images/applyyssn.png',
-                      height: 400, // Adjust the height of the image
+                      'assets/images/logo2.png',
+                      height: 125, // Adjust the height of the image
                       fit: BoxFit.contain, // Adjust the fit of the image
                     ),
                   ),
                 ),
-                SizedBox(height: 4),
-                completionInstructions,
-                SizedBox(height: 5),
+                //SizedBox(height: 1),
+                // Adjust as needed
+                spanEnterOver,
+                //enterOver,
+                SizedBox(height: 2),
+                //displays spant 1
                 Align(
                   alignment: Alignment.center,
                   child: Padding(
-                    padding: EdgeInsets.only(top: 5.0),
+                    padding: EdgeInsets.only(top: 3.0),
                     child: Image.asset(
-                      'assets/images/ssncompletioninstructions.png',
-                      height: 272, // Adjust the height of the image
+                      'assets/images/spant1.png',
+                      height: 120, // Adjust the height of the image
+                      fit: BoxFit.contain, // Adjust the fit of the image
+                    ),
+                  ),
+                ),
+                // SizedBox(height: 1),
+                Align(
+                  alignment: Alignment.center,
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 0.25),
+                    child: Image.asset(
+                      'assets/images/spant2.png',
+                      height: 120, // Adjust the height of the image
+                      fit: BoxFit.contain, // Adjust the fit of the image
+                    ),
+                  ),
+                ),
+                // SizedBox(height: 1),
+                Align(
+                  alignment: Alignment.center,
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 0.25),
+                    child: Image.asset(
+                      'assets/images/spant3.png',
+                      height: 120, // Adjust the height of the image
+                      fit: BoxFit.contain, // Adjust the fit of the image
+                    ),
+                  ),
+                ),
+                SizedBox(height: 1),
+                Align(
+                  alignment: Alignment.center,
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 1.0),
+                    child: Image.asset(
+                      'assets/images/spant5.png',
+                      height: 120, // Adjust the height of the image
+                      fit: BoxFit.contain, // Adjust the fit of the image
+                    ),
+                  ),
+                ),
+                SizedBox(height: 1),
+                Align(
+                  alignment: Alignment.center,
+                  child: Padding(
+                    padding: EdgeInsets.only(top: 1.0),
+                    child: Image.asset(
+                      'assets/images/spant6.png',
+                      height: 140, // Adjust the height of the image
                       fit: BoxFit.contain, // Adjust the fit of the image
                     ),
                   ),
@@ -57,14 +118,14 @@ class spanSsn16Body extends StatelessWidget {
           Align(
             alignment: Alignment.bottomRight,
             child: Padding(
-              padding: EdgeInsets.all(30.0),
+              padding: EdgeInsets.all(28.0),
               child: NextButton(
                 nextText: 'Next',
                 onPressed: () {
                   // You can handle any additional logic here
                 },
                 destinationScreen:
-                    ssnIntro(), // Replace HomeScreen() with the desired screen widget
+                    spanSsn812(), // Replace HomeScreen() with the desired screen widget
               ),
             ),
           ),
@@ -85,9 +146,9 @@ class spanSsn16Body extends StatelessWidget {
           Align(
             alignment: Alignment.bottomLeft,
             child: Padding(
-              padding: EdgeInsets.all(30.0),
-              child: EspanolButton(
-                espanolText: 'Español', // Replace with the desired button text
+              padding: EdgeInsets.all(28.0),
+              child: EnglishButton(
+                englishText: 'English', // Replace with the desired button text
                 onPressed: () {
                   // Handle button press, e.g., navigate to the desired screen
                   Navigator.push(

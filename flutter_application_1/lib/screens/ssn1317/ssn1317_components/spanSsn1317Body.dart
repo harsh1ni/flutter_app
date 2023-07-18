@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/homescreen/home_components/spanHomeBody.dart';
+import 'package:flutter_application_1/screens/lastscreen/spanLastScreen.dart';
 import 'package:flutter_application_1/screens/ssn1317/ssn1317.dart';
 import 'package:flutter_application_1/screens/ssn16/spanSsn16.dart';
-import 'package:flutter_application_1/screens/ssn812/ssn812.dart';
 import 'package:flutter_application_1/screens/ssnintro/spanSsnIntro.dart';
 import 'package:flutter_application_1/screens/ssnintro/ssnintro.dart';
 import 'package:flutter_application_1/utils/constants/colors.dart';
@@ -11,7 +11,7 @@ import 'package:flutter_application_1/utils/themes/button_dart.dart';
 
 //Class definition for homeBody
 //will have five images
-class ssn16Body extends StatelessWidget {
+class spanSsn1317Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -50,7 +50,7 @@ class ssn16Body extends StatelessWidget {
                 ),
                 //SizedBox(height: 1),
                 // Adjust as needed
-                enterOver,
+                spanEnterOver,
                 //enterOver,
                 SizedBox(height: 2),
                 //displays spant 1
@@ -59,7 +59,7 @@ class ssn16Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(top: 3.0),
                     child: Image.asset(
-                      'assets/images/ssnt1.png',
+                      'assets/images/spant13.png',
                       height: 120, // Adjust the height of the image
                       fit: BoxFit.contain, // Adjust the fit of the image
                     ),
@@ -71,7 +71,7 @@ class ssn16Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(top: 0.25),
                     child: Image.asset(
-                      'assets/images/ssnt2.png',
+                      'assets/images/spant14.png',
                       height: 120, // Adjust the height of the image
                       fit: BoxFit.contain, // Adjust the fit of the image
                     ),
@@ -83,7 +83,7 @@ class ssn16Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(top: 0.25),
                     child: Image.asset(
-                      'assets/images/ssnt3.png',
+                      'assets/images/spant16.png',
                       height: 120, // Adjust the height of the image
                       fit: BoxFit.contain, // Adjust the fit of the image
                     ),
@@ -95,7 +95,7 @@ class ssn16Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(top: 1.0),
                     child: Image.asset(
-                      'assets/images/ssnt5.png',
+                      'assets/images/spant17.png',
                       height: 120, // Adjust the height of the image
                       fit: BoxFit.contain, // Adjust the fit of the image
                     ),
@@ -107,8 +107,8 @@ class ssn16Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(top: 1.0),
                     child: Image.asset(
-                      'assets/images/ssnt6.png',
-                      height: 140, // Adjust the height of the image
+                      'assets/images/spant18.png',
+                      height: 130, // Adjust the height of the image
                       fit: BoxFit.contain, // Adjust the fit of the image
                     ),
                   ),
@@ -126,7 +126,7 @@ class ssn16Body extends StatelessWidget {
                   // You can handle any additional logic here
                 },
                 destinationScreen:
-                    ssn812(), // Replace HomeScreen() with the desired screen widget
+                    spanLastScreen(), // Replace HomeScreen() with the desired screen widget
               ),
             ),
           ),
@@ -148,20 +148,20 @@ class ssn16Body extends StatelessWidget {
             alignment: Alignment.bottomLeft,
             child: Padding(
               padding: EdgeInsets.all(28.0),
-              child: EspanolButton(
-                espanolText: 'Español', // Replace with the desired button text
+              child: EnglishButton(
+                englishText: 'English', // Replace with the desired button text
                 onPressed: () {
                   // Handle button press, e.g., navigate to the desired screen
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
-                          spanSsn16(), // Replace EspanolScreen() with the desired screen widget
+                          ssn1317(), // Replace EspanolScreen() with the desired screen widget
                     ),
                   );
                 },
                 destinationScreen:
-                    spanSsn16(), // Replace EspanolScreen() with the desired screen widget
+                    ssn1317(), // Replace EspanolScreen() with the desired screen widget
               ),
             ),
           ),
