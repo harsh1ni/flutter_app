@@ -27,6 +27,7 @@ var completionInstructions = Text("Completion Instructions",
 //Spanish Version of the social security intro
 var spanintroTerms = Text(
     "Condiciones generales del formulario de seguridad social",
+    textAlign: TextAlign.center,
     style: GoogleFonts.montserrat(
         textStyle: const TextStyle(
             fontSize: 16, fontWeight: FontWeight.normal, color: black)));
