@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/helpscreen/helpscreen.dart';
 import 'package:flutter_application_1/screens/homescreen/homePage.dart';
+import 'package:flutter_application_1/screens/homescreen/spanHomePage.dart';
+import 'package:flutter_application_1/screens/ssnintro/spanSsnIntro.dart';
 import 'package:flutter_application_1/screens/ssnintro/ssnintro.dart';
 import 'package:flutter_application_1/utils/constants/colors.dart';
 import 'package:flutter_application_1/utils/constants/styles.dart';
@@ -401,10 +403,69 @@ class ReviewGuideAgain extends StatelessWidget {
                     ssnIntro()), // Replace with the desired screen widget
           );
         },
-        child: reviewGuideAgain,
+        child: reviewGuideText,
       ),
     );
   }
 }
 
 //Spanish Versions of the long text buttons (Have Sky update those)
+class spanReturnToHome extends StatelessWidget {
+  const spanReturnToHome({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(29),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 100),
+          primary: white,
+          onPrimary: darkGrey,
+          side: BorderSide(color: darkGrey), // Set the border color here
+          shape: StadiumBorder(),
+        ),
+        onPressed: () {
+          // Handle button press
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    spanHomeScreen()), // Replace with the desired screen widget
+          );
+        },
+        child: spanReturnToHomeText,
+      ),
+    );
+  }
+}
+
+class spanReviewGuideAgain extends StatelessWidget {
+  const spanReviewGuideAgain({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(29),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 100),
+          primary: white,
+          onPrimary: darkGrey,
+          side: BorderSide(color: darkGrey), // Set the border color here
+          shape: StadiumBorder(),
+        ),
+        onPressed: () {
+          // Handle button press
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    spanSsnIntro()), // Replace with the desired screen widget
+          );
+        },
+        child: spanReviewGuideText,
+      ),
+    );
+  }
+}

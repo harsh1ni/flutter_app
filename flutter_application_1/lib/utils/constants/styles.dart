@@ -41,6 +41,7 @@ var spancompletionInstructions = Text("Instrucciones de finalización",
 //Return to home page or review the guide caption
 var reviewGuideAgain = Text(
     "Would you like to return to the home page or review the guide again?",
+    textAlign: TextAlign.center,
     style: GoogleFonts.montserrat(
         textStyle: const TextStyle(
             fontSize: 16, fontWeight: FontWeight.normal, color: black)));
@@ -55,13 +56,21 @@ var enterOver = Text("Enter over the given information written in red",
             color: Color.fromARGB(255, 150, 28, 19))));
 
 //Spanish enter over the given information in red caption
-var spanEnterOver = Text("Enter over the given information written in red",
+var spanEnterOver = Text("Ingrese sobre la información dada escrita en rojo",
     textAlign: TextAlign.center,
     style: GoogleFonts.montserrat(
         textStyle: const TextStyle(
             fontSize: 13,
             fontWeight: FontWeight.bold,
             color: Color.fromARGB(255, 150, 28, 19))));
+
+//Spanish review guide again text
+var spanReviewGuideAgainText = Text(
+    "¿Le gustaría volver a la página de inicio o revisar su formulario?",
+    textAlign: TextAlign.center,
+    style: GoogleFonts.montserrat(
+        textStyle: const TextStyle(
+            fontSize: 16, fontWeight: FontWeight.normal, color: black)));
 
 //Buttons text styles
 
@@ -119,8 +128,20 @@ var returnToHomeText = Text("Return to home page",
         textStyle: const TextStyle(
             fontSize: 15, fontWeight: FontWeight.normal, color: darkGrey)));
 
+//Spanish return to home page button
+var spanReturnToHomeText = Text("Regresar a la página principal",
+    style: GoogleFonts.martel(
+        textStyle: const TextStyle(
+            fontSize: 15, fontWeight: FontWeight.normal, color: darkGrey)));
+
 //Review guide again button
 var reviewGuideText = Text("Review guide again",
+    style: GoogleFonts.martel(
+        textStyle: const TextStyle(
+            fontSize: 15, fontWeight: FontWeight.normal, color: darkGrey)));
+
+//Spanish Review guide again button
+var spanReviewGuideText = Text("Revise la guía de nuevo",
     style: GoogleFonts.martel(
         textStyle: const TextStyle(
             fontSize: 15, fontWeight: FontWeight.normal, color: darkGrey)));
