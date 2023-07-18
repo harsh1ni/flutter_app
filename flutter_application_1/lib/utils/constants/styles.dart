@@ -45,6 +45,24 @@ var reviewGuideAgain = Text(
         textStyle: const TextStyle(
             fontSize: 16, fontWeight: FontWeight.normal, color: black)));
 
+//Enter over the given information in red caption
+var enterOver = Text("Enter over the given information written in red",
+    textAlign: TextAlign.center,
+    style: GoogleFonts.montserrat(
+        textStyle: const TextStyle(
+            fontSize: 13,
+            fontWeight: FontWeight.bold,
+            color: Color.fromARGB(255, 150, 28, 19))));
+
+//Spanish enter over the given information in red caption
+var spanEnterOver = Text("Enter over the given information written in red",
+    textAlign: TextAlign.center,
+    style: GoogleFonts.montserrat(
+        textStyle: const TextStyle(
+            fontSize: 13,
+            fontWeight: FontWeight.bold,
+            color: Color.fromARGB(255, 150, 28, 19))));
+
 //Buttons text styles
 
 //Next button text style
@@ -113,3 +131,28 @@ var letsGetStarted = Text("Let's Get Started!",
     style: GoogleFonts.martel(
         textStyle: const TextStyle(
             fontSize: 15, fontWeight: FontWeight.normal, color: darkGrey)));
+
+//Guide text
+var g1 = Text("this name will be on your social security card",
+    textAlign: TextAlign.center,
+    style: GoogleFonts.montserrat(
+        textStyle: const TextStyle(
+            fontSize: 9,
+            fontWeight: FontWeight.normal,
+            color: Color.fromARGB(255, 138, 196, 72))));
+
+var g1two = Text("enter in your name if it is not the name you entered above",
+    textAlign: TextAlign.center,
+    style: GoogleFonts.montserrat(
+        textStyle: const TextStyle(
+            fontSize: 9,
+            fontWeight: FontWeight.normal,
+            color: Color.fromARGB(255, 138, 196, 72))));
+
+var g2 = Text("enter in your name if it is not the name you entered above",
+    textAlign: TextAlign.center,
+    style: GoogleFonts.montserrat(
+        textStyle: const TextStyle(
+            fontSize: 9,
+            fontWeight: FontWeight.normal,
+            color: Color.fromARGB(255, 138, 196, 72))));

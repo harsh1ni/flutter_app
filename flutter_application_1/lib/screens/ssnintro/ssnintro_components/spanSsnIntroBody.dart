@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/homescreen/home_components/spanHomeBody.dart';
+import 'package:flutter_application_1/screens/ssn16/spanSsn16.dart';
 import 'package:flutter_application_1/screens/ssnintro/ssnintro.dart';
 import 'package:flutter_application_1/utils/constants/colors.dart';
 import 'package:flutter_application_1/utils/constants/styles.dart';
@@ -62,7 +63,7 @@ class spanSsnIntroBody extends StatelessWidget {
                   // You can handle any additional logic here
                 },
                 destinationScreen:
-                    ssnIntro(), // Replace HomeScreen() with the desired screen widget
+                    spanSsn16(), // Replace HomeScreen() with the desired screen widget
               ),
             ),
           ),

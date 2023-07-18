@@ -8,7 +8,7 @@ import 'package:flutter_application_1/utils/constants/styles.dart';
 import 'package:flutter_application_1/utils/themes/button_dart.dart';
 
 //Class definition for homeBody
-class ssnIntroBody extends StatelessWidget {
+class spanSsn16Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -64,7 +64,7 @@ class ssnIntroBody extends StatelessWidget {
                   // You can handle any additional logic here
                 },
                 destinationScreen:
-                    ssn16(), // Replace HomeScreen() with the desired screen widget
+                    ssnIntro(), // Replace HomeScreen() with the desired screen widget
               ),
             ),
           ),
@@ -94,12 +94,12 @@ class ssnIntroBody extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
-                          spanSsnIntro(), // Replace EspanolScreen() with the desired screen widget
+                          ssn16(), // Replace EspanolScreen() with the desired screen widget
                     ),
                   );
                 },
                 destinationScreen:
-                    spanSsnIntro(), // Replace EspanolScreen() with the desired screen widget
+                    ssn16(), // Replace EspanolScreen() with the desired screen widget
               ),
             ),
           ),
