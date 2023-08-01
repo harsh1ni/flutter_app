@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/welcome/introPage.dart'; // Import the welcome.dart file
 
-import 'package:flutter_application_1/utils/constants/colors.dart';
-import 'package:flutter_application_1/utils/constants/styles.dart';
-import 'package:flutter_application_1/utils/themes/button_dart.dart';
-
+//This file runs the completed version of LegalEase Narrow Scope
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'LegalEase',
       home: welcomeScreen(), // Call the WelcomeScreen as the home widget
     );

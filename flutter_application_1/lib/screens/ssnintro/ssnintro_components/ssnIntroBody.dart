@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/homescreen/home_components/spanHomeBody.dart';
 import 'package:flutter_application_1/screens/ssn16/ssn16.dart';
 import 'package:flutter_application_1/screens/ssnintro/spanSsnIntro.dart';
-import 'package:flutter_application_1/screens/ssnintro/ssnintro.dart';
 import 'package:flutter_application_1/utils/constants/colors.dart';
 import 'package:flutter_application_1/utils/constants/styles.dart';
 import 'package:flutter_application_1/utils/themes/button_dart.dart';
 
 //Class definition for homeBody
 class ssnIntroBody extends StatelessWidget {
+  const ssnIntroBody({super.key});
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -23,13 +23,13 @@ class ssnIntroBody extends StatelessWidget {
             child: Column(
               //mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 100),
+                const SizedBox(height: 100),
                 introTerms,
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 Align(
                   alignment: Alignment.center,
                   child: Padding(
-                    padding: EdgeInsets.only(top: 6.0),
+                    padding: const EdgeInsets.only(top: 6.0),
                     child: Image.asset(
                       'assets/images/applyyssn.png',
                       height: 400, // Adjust the height of the image
@@ -37,13 +37,13 @@ class ssnIntroBody extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 4),
+                const SizedBox(height: 4),
                 completionInstructions,
-                SizedBox(height: 5),
+                const SizedBox(height: 5),
                 Align(
                   alignment: Alignment.center,
                   child: Padding(
-                    padding: EdgeInsets.only(top: 5.0),
+                    padding: const EdgeInsets.only(top: 5.0),
                     child: Image.asset(
                       'assets/images/ssncompletioninstructions.png',
                       height: 272, // Adjust the height of the image
@@ -57,25 +57,25 @@ class ssnIntroBody extends StatelessWidget {
           Align(
             alignment: Alignment.bottomRight,
             child: Padding(
-              padding: EdgeInsets.all(30.0),
+              padding: const EdgeInsets.all(30.0),
               child: NextButton(
                 nextText: 'Next',
                 onPressed: () {
                   // You can handle any additional logic here
                 },
                 destinationScreen:
-                    ssn16(), // Replace HomeScreen() with the desired screen widget
+                    const ssn16(), // Replace HomeScreen() with the desired screen widget
               ),
             ),
           ),
-          Align(
+          const Align(
             alignment: Alignment.topLeft,
             child: Padding(
               padding: EdgeInsets.only(top: 40.0, left: 30.0),
               child: CustomBackButton(),
             ),
           ),
-          Align(
+          const Align(
             alignment: Alignment.topRight,
             child: Padding(
               padding: EdgeInsets.only(top: 40.0, right: 30.0),
@@ -85,7 +85,7 @@ class ssnIntroBody extends StatelessWidget {
           Align(
             alignment: Alignment.bottomLeft,
             child: Padding(
-              padding: EdgeInsets.all(30.0),
+              padding: const EdgeInsets.all(30.0),
               child: EspanolButton(
                 espanolText: 'Español', // Replace with the desired button text
                 onPressed: () {
@@ -94,12 +94,12 @@ class ssnIntroBody extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
-                          spanSsnIntro(), // Replace EspanolScreen() with the desired screen widget
+                          const spanSsnIntro(), // Replace EspanolScreen() with the desired screen widget
                     ),
                   );
                 },
                 destinationScreen:
-                    spanSsnIntro(), // Replace EspanolScreen() with the desired screen widget
+                    const spanSsnIntro(), // Replace EspanolScreen() with the desired screen widget
               ),
             ),
           ),

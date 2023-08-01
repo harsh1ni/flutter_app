@@ -36,7 +36,8 @@ class NextButton extends StatelessWidget {
   final Function onPressed;
   final Widget destinationScreen;
 
-  NextButton({
+  const NextButton({
+    super.key,
     required this.nextText,
     required this.onPressed,
     required this.destinationScreen,
@@ -48,9 +49,9 @@ class NextButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(29),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-          primary: lightGrey,
-          onPrimary: white,
+          foregroundColor: white,
+          backgroundColor: lightGrey,
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
         ),
         onPressed: () {
           // Navigate to the specified destinationScreen when the button is pressed
@@ -76,9 +77,9 @@ class CustomBackButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(29),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-          primary: lightGrey,
-          onPrimary: darkGrey,
+          foregroundColor: darkGrey,
+          backgroundColor: lightGrey,
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
         ),
         onPressed: () {
           Navigator.pop(context); // Handle button press
@@ -119,7 +120,8 @@ class EspanolButton extends StatelessWidget {
   final Function onPressed;
   final Widget destinationScreen;
 
-  EspanolButton({
+  const EspanolButton({
+    super.key,
     required this.espanolText,
     required this.onPressed,
     required this.destinationScreen,
@@ -131,9 +133,9 @@ class EspanolButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(29),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-          primary: black,
-          onPrimary: white,
+          foregroundColor: white,
+          backgroundColor: black,
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
         ),
         onPressed: () {
           // Navigate to the specified destinationScreen when the button is pressed
@@ -178,7 +180,8 @@ class EnglishButton extends StatelessWidget {
   final Function onPressed;
   final Widget destinationScreen;
 
-  EnglishButton({
+  const EnglishButton({
+    super.key,
     required this.englishText,
     required this.onPressed,
     required this.destinationScreen,
@@ -190,9 +193,9 @@ class EnglishButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(29),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-          primary: black,
-          onPrimary: white,
+          foregroundColor: white,
+          backgroundColor: black,
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
         ),
         onPressed: () {
           // Navigate to the specified destinationScreen when the button is pressed
@@ -218,9 +221,9 @@ class DescargarButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(29),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
-          primary: black,
-          onPrimary: black,
+          foregroundColor: black,
+          backgroundColor: black,
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
         ),
         onPressed: () {
           // Handle button press
@@ -269,13 +272,13 @@ class HelpButton extends StatelessWidget {
         // Navigate to the HelpScreen when the button is pressed
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => helpScreen()),
+          MaterialPageRoute(builder: (context) => const helpScreen()),
         );
       },
       style: ElevatedButton.styleFrom(
-        padding: EdgeInsets.all(0),
-        shape: CircleBorder(),
-        primary: lightGrey, // Assuming "black" is a valid color variable
+        padding: const EdgeInsets.all(0), backgroundColor: lightGrey,
+        shape:
+            const CircleBorder(), // Assuming "black" is a valid color variable
       ),
       child: Container(
         width: 40,
@@ -303,11 +306,10 @@ class SocialSecurityForm extends StatelessWidget {
       borderRadius: BorderRadius.circular(29),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(vertical: 25, horizontal: 100),
-          primary: white,
-          onPrimary: darkGrey,
-          side: BorderSide(color: darkGrey), // Set the border color here
-          shape: StadiumBorder(),
+          foregroundColor: darkGrey, backgroundColor: white,
+          padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 100),
+          side: const BorderSide(color: darkGrey), // Set the border color here
+          shape: const StadiumBorder(),
         ),
         onPressed: () {
           // Handle button press
@@ -315,7 +317,7 @@ class SocialSecurityForm extends StatelessWidget {
             context,
             MaterialPageRoute(
                 builder: (context) =>
-                    ssnIntro()), // Replace with the desired screen widget
+                    const ssnIntro()), // Replace with the desired screen widget
           );
         },
         child: socialSecurityText,
@@ -324,6 +326,36 @@ class SocialSecurityForm extends StatelessWidget {
   }
 }
 
+//Class Definition for Spanish Social Security Form button
+//Make this navigate to SSN Intro Screen
+class spanSocialSecurityForm extends StatelessWidget {
+  const spanSocialSecurityForm({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(29),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          foregroundColor: darkGrey, backgroundColor: white,
+          padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 100),
+          side: const BorderSide(color: darkGrey), // Set the border color here
+          shape: const StadiumBorder(),
+        ),
+        onPressed: () {
+          // Handle button press
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    const spanSsnIntro()), // Replace with the desired screen widget
+          );
+        },
+        child: spanSocialSecurityText,
+      ),
+    );
+  }
+}
 //Class definition for Return to home page button
 //Edit this to make it navigate to homeScreen
 
@@ -336,11 +368,10 @@ class ReturnToHome extends StatelessWidget {
       borderRadius: BorderRadius.circular(29),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 100),
-          primary: white,
-          onPrimary: darkGrey,
-          side: BorderSide(color: darkGrey), // Set the border color here
-          shape: StadiumBorder(),
+          foregroundColor: darkGrey, backgroundColor: white,
+          padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 100),
+          side: const BorderSide(color: darkGrey), // Set the border color here
+          shape: const StadiumBorder(),
         ),
         onPressed: () {
           // Handle button press
@@ -348,7 +379,7 @@ class ReturnToHome extends StatelessWidget {
             context,
             MaterialPageRoute(
                 builder: (context) =>
-                    homeScreen()), // Replace with the desired screen widget
+                    const homeScreen()), // Replace with the desired screen widget
           );
         },
         child: returnToHomeText,
@@ -388,11 +419,10 @@ class ReviewGuideAgain extends StatelessWidget {
       borderRadius: BorderRadius.circular(29),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 100),
-          primary: white,
-          onPrimary: darkGrey,
-          side: BorderSide(color: darkGrey), // Set the border color here
-          shape: StadiumBorder(),
+          foregroundColor: darkGrey, backgroundColor: white,
+          padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 100),
+          side: const BorderSide(color: darkGrey), // Set the border color here
+          shape: const StadiumBorder(),
         ),
         onPressed: () {
           // Handle button press
@@ -400,7 +430,7 @@ class ReviewGuideAgain extends StatelessWidget {
             context,
             MaterialPageRoute(
                 builder: (context) =>
-                    ssnIntro()), // Replace with the desired screen widget
+                    const ssnIntro()), // Replace with the desired screen widget
           );
         },
         child: reviewGuideText,
@@ -419,11 +449,10 @@ class spanReturnToHome extends StatelessWidget {
       borderRadius: BorderRadius.circular(29),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 100),
-          primary: white,
-          onPrimary: darkGrey,
-          side: BorderSide(color: darkGrey), // Set the border color here
-          shape: StadiumBorder(),
+          foregroundColor: darkGrey, backgroundColor: white,
+          padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 100),
+          side: const BorderSide(color: darkGrey), // Set the border color here
+          shape: const StadiumBorder(),
         ),
         onPressed: () {
           // Handle button press
@@ -431,7 +460,7 @@ class spanReturnToHome extends StatelessWidget {
             context,
             MaterialPageRoute(
                 builder: (context) =>
-                    spanHomeScreen()), // Replace with the desired screen widget
+                    const spanHomeScreen()), // Replace with the desired screen widget
           );
         },
         child: spanReturnToHomeText,
@@ -449,11 +478,10 @@ class spanReviewGuideAgain extends StatelessWidget {
       borderRadius: BorderRadius.circular(29),
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(vertical: 30, horizontal: 100),
-          primary: white,
-          onPrimary: darkGrey,
-          side: BorderSide(color: darkGrey), // Set the border color here
-          shape: StadiumBorder(),
+          foregroundColor: darkGrey, backgroundColor: white,
+          padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 100),
+          side: const BorderSide(color: darkGrey), // Set the border color here
+          shape: const StadiumBorder(),
         ),
         onPressed: () {
           // Handle button press
@@ -461,7 +489,7 @@ class spanReviewGuideAgain extends StatelessWidget {
             context,
             MaterialPageRoute(
                 builder: (context) =>
-                    spanSsnIntro()), // Replace with the desired screen widget
+                    const spanSsnIntro()), // Replace with the desired screen widget
           );
         },
         child: spanReviewGuideText,

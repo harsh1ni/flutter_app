@@ -1,8 +1,5 @@
 //Importing my own files/material.dart package
 import 'package:flutter_application_1/screens/welcome/components/body.dart';
-import 'package:flutter_application_1/utils/constants/colors.dart';
-import 'package:flutter_application_1/utils/constants/spaces.dart';
-import 'package:flutter_application_1/utils/constants/styles.dart';
 import 'package:flutter/material.dart';
 
 class welcomeScreen extends StatelessWidget {
@@ -10,7 +7,7 @@ class welcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Column(
         children: [
           Body(), // Use the Body widget

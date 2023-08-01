@@ -1,9 +1,4 @@
 import 'package:flutter_application_1/screens/ssnintro/ssnintro_components/spanSsnIntroBody.dart';
-import 'package:flutter_application_1/screens/ssnintro/ssnintro_components/ssnIntroBody.dart';
-import 'package:flutter_application_1/utils/themes/button_dart.dart';
-import 'package:flutter_application_1/utils/constants/colors.dart';
-import 'package:flutter_application_1/utils/constants/spaces.dart';
-import 'package:flutter_application_1/utils/constants/styles.dart';
 import 'package:flutter/material.dart';
 
 class spanSsnIntro extends StatelessWidget {
@@ -11,7 +6,7 @@ class spanSsnIntro extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Column(
         children: [
           spanSsnIntroBody(), // Use the Body widget
