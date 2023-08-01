@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/homescreen/home_components/spanHomeBody.dart';
 import 'package:flutter_application_1/screens/ssn1317/spanSsn1317.dart';
-import 'package:flutter_application_1/screens/ssn16/ssn16.dart';
 import 'package:flutter_application_1/screens/ssn812/ssn812.dart';
-import 'package:flutter_application_1/screens/ssnintro/spanSsnIntro.dart';
-import 'package:flutter_application_1/screens/ssnintro/ssnintro.dart';
 import 'package:flutter_application_1/utils/constants/colors.dart';
 import 'package:flutter_application_1/utils/constants/styles.dart';
 import 'package:flutter_application_1/utils/themes/button_dart.dart';
 
 //Class definition for homeBody
 class spanSsn812Body extends StatelessWidget {
+  const spanSsn812Body({super.key});
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -39,7 +37,7 @@ class spanSsn812Body extends StatelessWidget {
                 Align(
                   alignment: Alignment.topCenter,
                   child: Padding(
-                    padding: EdgeInsets.only(top: 1.0),
+                    padding: const EdgeInsets.only(top: 1.0),
                     child: Image.asset(
                       'assets/images/logo2.png',
                       height: 125, // Adjust the height of the image
@@ -51,12 +49,12 @@ class spanSsn812Body extends StatelessWidget {
                 // Adjust as needed
                 spanEnterOver,
                 //enterOver,
-                SizedBox(height: 2),
+                const SizedBox(height: 2),
                 //displays spant 1
                 Align(
                   alignment: Alignment.center,
                   child: Padding(
-                    padding: EdgeInsets.only(top: 3.0),
+                    padding: const EdgeInsets.only(top: 3.0),
                     child: Image.asset(
                       'assets/images/spant8.png',
                       height: 120, // Adjust the height of the image
@@ -68,7 +66,7 @@ class spanSsn812Body extends StatelessWidget {
                 Align(
                   alignment: Alignment.center,
                   child: Padding(
-                    padding: EdgeInsets.only(top: 0.25),
+                    padding: const EdgeInsets.only(top: 0.25),
                     child: Image.asset(
                       'assets/images/spant9.png',
                       height: 120, // Adjust the height of the image
@@ -80,7 +78,7 @@ class spanSsn812Body extends StatelessWidget {
                 Align(
                   alignment: Alignment.center,
                   child: Padding(
-                    padding: EdgeInsets.only(top: 0.25),
+                    padding: const EdgeInsets.only(top: 0.25),
                     child: Image.asset(
                       'assets/images/spant10.png',
                       height: 120, // Adjust the height of the image
@@ -88,11 +86,11 @@ class spanSsn812Body extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 1),
+                const SizedBox(height: 1),
                 Align(
                   alignment: Alignment.center,
                   child: Padding(
-                    padding: EdgeInsets.only(top: 1.0),
+                    padding: const EdgeInsets.only(top: 1.0),
                     child: Image.asset(
                       'assets/images/spant11.png',
                       height: 140, // Adjust the height of the image
@@ -100,11 +98,11 @@ class spanSsn812Body extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 1),
+                const SizedBox(height: 1),
                 Align(
                   alignment: Alignment.center,
                   child: Padding(
-                    padding: EdgeInsets.only(top: 1.0),
+                    padding: const EdgeInsets.only(top: 1.0),
                     child: Image.asset(
                       'assets/images/spant12.png',
                       height: 140, // Adjust the height of the image
@@ -118,25 +116,25 @@ class spanSsn812Body extends StatelessWidget {
           Align(
             alignment: Alignment.bottomRight,
             child: Padding(
-              padding: EdgeInsets.all(28.0),
+              padding: const EdgeInsets.all(28.0),
               child: NextButton(
                 nextText: 'Next',
                 onPressed: () {
                   // You can handle any additional logic here
                 },
                 destinationScreen:
-                    spanSsn1317(), // Replace HomeScreen() with the desired screen widget
+                    const spanSsn1317(), // Replace HomeScreen() with the desired screen widget
               ),
             ),
           ),
-          Align(
+          const Align(
             alignment: Alignment.topLeft,
             child: Padding(
               padding: EdgeInsets.only(top: 40.0, left: 30.0),
               child: CustomBackButton(),
             ),
           ),
-          Align(
+          const Align(
             alignment: Alignment.topRight,
             child: Padding(
               padding: EdgeInsets.only(top: 40.0, right: 30.0),
@@ -146,7 +144,7 @@ class spanSsn812Body extends StatelessWidget {
           Align(
             alignment: Alignment.bottomLeft,
             child: Padding(
-              padding: EdgeInsets.all(28.0),
+              padding: const EdgeInsets.all(28.0),
               child: EnglishButton(
                 englishText: 'English', // Replace with the desired button text
                 onPressed: () {
@@ -155,12 +153,12 @@ class spanSsn812Body extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
-                          ssn812(), // Replace EspanolScreen() with the desired screen widget
+                          const ssn812(), // Replace EspanolScreen() with the desired screen widget
                     ),
                   );
                 },
                 destinationScreen:
-                    ssn812(), // Replace EspanolScreen() with the desired screen widget
+                    const ssn812(), // Replace EspanolScreen() with the desired screen widget
               ),
             ),
           ),

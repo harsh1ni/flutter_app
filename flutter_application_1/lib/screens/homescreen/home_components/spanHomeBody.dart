@@ -8,6 +8,8 @@ import 'package:flutter_application_1/utils/themes/button_dart.dart';
 //Class definition for homeBody
 //Make sure to replace the text and buttons with the spanish version
 class spanHomeBody extends StatelessWidget {
+  const spanHomeBody({super.key});
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -20,7 +22,7 @@ class spanHomeBody extends StatelessWidget {
           Align(
             alignment: Alignment.topCenter,
             child: Padding(
-              padding: EdgeInsets.only(top: 12.0),
+              padding: const EdgeInsets.only(top: 12.0),
               child: Image.asset(
                 'assets/icons/lelogo.png',
                 height: 500, // Adjust the height of the image
@@ -33,45 +35,45 @@ class spanHomeBody extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: 20),
-                welcomeText,
-                SizedBox(height: 30),
-                SocialSecurityForm(),
+                const SizedBox(height: 20),
+                spanWelcomeText,
+                const SizedBox(height: 31),
+                const spanSocialSecurityForm(),
               ],
             ),
           ),
           Align(
             alignment: Alignment.bottomRight,
             child: Padding(
-              padding: EdgeInsets.all(30.0),
+              padding: const EdgeInsets.all(30.0),
               child: NextButton(
                 nextText: 'Next',
                 onPressed: () {
                   // You can handle any additional logic here
                 },
                 destinationScreen:
-                    ssnIntro(), // Replace HomeScreen() with the desired screen widget
+                    const ssnIntro(), // Replace HomeScreen() with the desired screen widget
               ),
             ),
           ),
-          Align(
+          const Align(
             alignment: Alignment.topLeft,
             child: Padding(
-              padding: EdgeInsets.all(36.0),
+              padding: EdgeInsets.only(top: 40, left: 36.0),
               child: CustomBackButton(),
             ),
           ),
-          Align(
+          const Align(
             alignment: Alignment.topRight,
             child: Padding(
-              padding: EdgeInsets.all(36.0),
+              padding: EdgeInsets.only(top: 40, right: 36.0),
               child: HelpButton(),
             ),
           ),
           Align(
             alignment: Alignment.bottomLeft,
             child: Padding(
-              padding: EdgeInsets.all(30.0),
+              padding: const EdgeInsets.all(30.0),
               child: EnglishButton(
                 englishText: 'English', // Replace with the desired button text
                 onPressed: () {
@@ -80,12 +82,12 @@ class spanHomeBody extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) =>
-                          homeScreen(), // Replace EspanolScreen() with the desired screen widget
+                          const homeScreen(), // Replace EspanolScreen() with the desired screen widget
                     ),
                   );
                 },
                 destinationScreen:
-                    homeScreen(), // Replace EspanolScreen() with the desired screen widget
+                    const homeScreen(), // Replace EspanolScreen() with the desired screen widget
               ),
             ),
           ),

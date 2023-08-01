@@ -1,11 +1,4 @@
-import 'package:flutter_application_1/screens/ssn1317/ssn1317_components/ssn1317Body.dart';
-import 'package:flutter_application_1/screens/ssn16/ssn16_components/ssn16Body.dart';
 import 'package:flutter_application_1/screens/ssn812/ssn812_components/spanSsn812Body.dart';
-import 'package:flutter_application_1/screens/ssnintro/ssnintro_components/ssnIntroBody.dart';
-import 'package:flutter_application_1/utils/themes/button_dart.dart';
-import 'package:flutter_application_1/utils/constants/colors.dart';
-import 'package:flutter_application_1/utils/constants/spaces.dart';
-import 'package:flutter_application_1/utils/constants/styles.dart';
 import 'package:flutter/material.dart';
 
 class spanSsn812 extends StatelessWidget {
@@ -13,7 +6,7 @@ class spanSsn812 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Column(
         children: [
           spanSsn812Body(), // Use the Body widget
