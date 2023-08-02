@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/login/loginScreen.dart';
+import 'package:flutter_application_1/pages/signup/signup.dart';
 import 'package:flutter_application_1/screens/homescreen/homePage.dart';
 import 'package:flutter_application_1/utils/constants/colors.dart';
 import 'package:flutter_application_1/utils/themes/button_dart.dart';
@@ -30,8 +31,9 @@ class Body extends StatelessWidget {
                   // You can handle any additional logic here
                 },
                 destinationScreen:
-                   // const homeScreen(), 
-                    LoginScreen(),// Replace HomeScreen() with the desired screen widget
+                    // const homeScreen(),
+                    // LoginScreen(),
+                    signupScreen(), // Replace HomeScreen() with the desired screen widget
               ),
             ),
           ),

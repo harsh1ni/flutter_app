@@ -23,16 +23,16 @@ class LoginScreen extends StatelessWidget {
               //Logo
               Image.asset(
                 'assets/images/logo2.png',
-                height: 263, // Adjust the height of the image
+                height: 260, // Adjust the height of the image
                 fit: BoxFit.contain, // Adjust the fit of the image
               ),
               //Spacing
-              SizedBox(height: 5),
+              //SizedBox(height: 2),
               //Welcome text
               loginWelcome,
 
               //Spacing
-              SizedBox(height: 30),
+              SizedBox(height: 15),
               //Login header text
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -62,7 +62,7 @@ class LoginScreen extends StatelessWidget {
               //needs a login button here
               SizedBox(height: 20),
               loginButton(),
-              SizedBox(height: 15),
+              SizedBox(height: 25),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
@@ -76,7 +76,7 @@ class LoginScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Text(
-                        'Or continue with',
+                        'Or continue using',
                         style: TextStyle(color: Colors.grey[700]),
                       ),
                     ),
@@ -90,7 +90,7 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 12),
+              const SizedBox(height: 15),
 
               // google + apple sign in buttons
               // Row(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/login/loginScreen.dart';
 import 'package:flutter_application_1/screens/helpscreen/helpscreen.dart';
 import 'package:flutter_application_1/screens/homescreen/homePage.dart';
 import 'package:flutter_application_1/screens/homescreen/spanHomePage.dart';
@@ -574,7 +575,7 @@ class loginButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           foregroundColor: darkGrey, backgroundColor: white,
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 60),
           side: const BorderSide(color: darkGrey), // Set the border color here
           shape: const StadiumBorder(),
         ),
@@ -588,6 +589,35 @@ class loginButton extends StatelessWidget {
           );
         },
         child: loginButtonText,
+      ),
+    );
+  }
+}
+
+class createAccountButton extends StatelessWidget {
+  const createAccountButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(29),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          foregroundColor: darkGrey, backgroundColor: white,
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 70),
+          side: const BorderSide(color: darkGrey), // Set the border color here
+          shape: const StadiumBorder(),
+        ),
+        onPressed: () {
+          // Handle button press
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    LoginScreen()), // Replace with the desired screen widget
+          );
+        },
+        child: createAccountButtonText,
       ),
     );
   }

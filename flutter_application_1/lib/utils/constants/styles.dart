@@ -567,7 +567,7 @@ var guestText = Text("Guest",
 
 //Sign Up Frame
 //Login text
-var createAccountText = Text("Create Account",
+var createAccountText = Text("     Create Account",
     textAlign: TextAlign.left,
     style: GoogleFonts.montserrat(
         textStyle: const TextStyle(
@@ -588,6 +588,12 @@ var alreadyHaveAnAccountText = Text("Already have an account? Log in",
 
 var loginButtonText = Text("Login",
     // textAlign: TextAlign.left,
+    style: GoogleFonts.montserrat(
+        textStyle: const TextStyle(
+            fontSize: 20, fontWeight: FontWeight.normal, color: black)));
+
+var createAccountButtonText = Text("Create Account",
+    textAlign: TextAlign.left,
     style: GoogleFonts.montserrat(
         textStyle: const TextStyle(
             fontSize: 20, fontWeight: FontWeight.normal, color: black)));
