@@ -23,7 +23,7 @@ class LoginScreen extends StatelessWidget {
               //Logo
               Image.asset(
                 'assets/images/logo2.png',
-                height: 260, // Adjust the height of the image
+                height: 258, // Adjust the height of the image
                 fit: BoxFit.contain, // Adjust the fit of the image
               ),
               //Spacing
