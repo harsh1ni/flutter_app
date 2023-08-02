@@ -525,8 +525,8 @@ var loginWelcome = Text(
             fontSize: 16, fontWeight: FontWeight.normal, color: black)));
 
 //Login text
-var login = Text("Login",
-   // textAlign: TextAlign.left,
+var login = Text("     Login",
+    // textAlign: TextAlign.left,
     style: GoogleFonts.montserrat(
         textStyle: const TextStyle(
             fontSize: 20, fontWeight: FontWeight.normal, color: black)));
@@ -585,3 +585,9 @@ var alreadyHaveAnAccountText = Text("Already have an account? Log in",
     style: GoogleFonts.montserrat(
         textStyle: const TextStyle(
             fontSize: 12, fontWeight: FontWeight.normal, color: lightGrey)));
+
+var loginButtonText = Text("Login",
+    // textAlign: TextAlign.left,
+    style: GoogleFonts.montserrat(
+        textStyle: const TextStyle(
+            fontSize: 20, fontWeight: FontWeight.normal, color: black)));

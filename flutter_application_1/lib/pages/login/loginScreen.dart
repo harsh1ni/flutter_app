@@ -19,15 +19,15 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             children: [
               //Spacing
-              SizedBox(height: 10),
+              //SizedBox(height: 10),
               //Logo
               Image.asset(
                 'assets/images/logo2.png',
-                height: 200, // Adjust the height of the image
+                height: 263, // Adjust the height of the image
                 fit: BoxFit.contain, // Adjust the fit of the image
               ),
               //Spacing
-              SizedBox(height: 20),
+              SizedBox(height: 5),
               //Welcome text
               loginWelcome,
 
@@ -90,19 +90,56 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 30),
+              const SizedBox(height: 12),
 
               // google + apple sign in buttons
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: const [
+              //     // google button
+              //     SquareTile(imagePath: 'assets/icons/googleicon.png'),
+              //     Column(
+              //       children: [ SizedBox(height: 2),
+              //       googleText,
+              //       ]
+              //     ),
+
+              //     SizedBox(width: 25),
+
+              //     // apple button
+              //     SquareTile(imagePath: 'assets/icons/guesticon.png'),
+              //     Column(
+              //       children: [ SizedBox(height: 2),
+              //       guestText,
+              //       ]
+              //     ),
+              //   ],
+              // ),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
                   // google button
-                  SquareTile(imagePath: 'assets/icons/googleicon.png'),
+                  Column(
+                    children: [
+                      SquareTile(imagePath: 'assets/icons/googleicon.png'),
+                      SizedBox(height: 2),
+                      Text(
+                          'Google'), // Replace 'Google' with the actual text you want to display
+                    ],
+                  ),
 
                   SizedBox(width: 25),
 
                   // apple button
-                  SquareTile(imagePath: 'assets/icons/guesticon.png')
+                  Column(
+                    children: [
+                      SquareTile(imagePath: 'assets/icons/guesticon.png'),
+                      SizedBox(height: 2),
+                      Text(
+                          'Guest'), // Replace 'Guest' with the actual text you want to display
+                    ],
+                  ),
                 ],
               ),
 

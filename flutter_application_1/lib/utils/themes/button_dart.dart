@@ -574,7 +574,7 @@ class loginButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           foregroundColor: darkGrey, backgroundColor: white,
-          padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 40),
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
           side: const BorderSide(color: darkGrey), // Set the border color here
           shape: const StadiumBorder(),
         ),
@@ -587,7 +587,7 @@ class loginButton extends StatelessWidget {
                     const homeScreen()), // Replace with the desired screen widget
           );
         },
-        child: login,
+        child: loginButtonText,
       ),
     );
   }
