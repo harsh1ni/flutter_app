@@ -32,8 +32,10 @@ class Body extends StatelessWidget {
                 },
                 destinationScreen:
                     // const homeScreen(),
-                    // LoginScreen(),
-                    signupScreen(), // Replace HomeScreen() with the desired screen widget
+                    //LoginScreen(),
+                    signUpScreen(
+                  onTap: () {},
+                ), // Replace HomeScreen() with the desired screen widget
               ),
             ),
           ),

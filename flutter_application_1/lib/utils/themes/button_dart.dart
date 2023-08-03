@@ -613,8 +613,9 @@ class createAccountButton extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) =>
-                    LoginScreen()), // Replace with the desired screen widget
+                builder: (context) => LoginScreen(
+                      onTap: () {},
+                    )), // Replace with the desired screen widget
           );
         },
         child: createAccountButtonText,
@@ -643,6 +644,31 @@ class fbLoginButton extends StatelessWidget {
           shape: BoxShape.rectangle,
         ),
         child: loginButtonText, // Replace 'Login' with the desired button text
+      ),
+    );
+  }
+}
+
+class fbSignUpButton extends StatelessWidget {
+  final Function()? onTap;
+
+  const fbSignUpButton({super.key, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        // foregroundColor: darkGrey,
+        // backgroundColor: white,
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 60),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(29),
+          border: Border.all(color: darkGrey), // Set the border color here
+          shape: BoxShape.rectangle,
+        ),
+        child:
+            createAccountButtonText, // Replace 'Login' with the desired button text
       ),
     );
   }
