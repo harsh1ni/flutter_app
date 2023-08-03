@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/homescreen/spanHomePage.dart';
 import 'package:flutter_application_1/screens/ssnintro/ssnintro.dart';
@@ -8,6 +9,10 @@ import 'package:flutter_application_1/utils/themes/button_dart.dart';
 //Class definition for homeBody
 class homeBody extends StatelessWidget {
   const homeBody({super.key});
+
+  void signUserOut() {
+    FirebaseAuth.instance.signOut();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -55,13 +60,29 @@ class homeBody extends StatelessWidget {
               ),
             ),
           ),
-          const Align(
+          Align(
             alignment: Alignment.topLeft,
             child: Padding(
-              padding: EdgeInsets.only(top: 40, left: 36.0),
-              child: CustomBackButton(),
+              padding: const EdgeInsets.all(40.0),
+              child: IconButton(
+                onPressed: signUserOut,
+                icon: Icon(Icons.logout),
+              ),
             ),
           ),
+
+          // const Align(
+          //   alignment: Alignment.topLeft,
+          //   child: Padding(
+          //     padding: EdgeInsets.only(top: 40, left: 36.0),
+          //     child: CustomBackButton(),
+
+          // //     child: IconButton(
+          // //    onPressed: signUserOut,
+          // //   icon: Icon(Icons.logout),
+          // // ),
+          //   ),
+          // ),
           const Align(
             alignment: Alignment.topRight,
             child: Padding(

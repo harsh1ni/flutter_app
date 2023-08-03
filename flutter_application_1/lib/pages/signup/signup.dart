@@ -10,7 +10,7 @@ class signupScreen extends StatelessWidget {
 
   final emailAddressController = TextEditingController();
   final passwordController = TextEditingController();
-  final fullNameController = TextEditingController();
+  final confirmPasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -42,14 +42,14 @@ class signupScreen extends StatelessWidget {
                 ],
               ),
 
-              //Spacing
-              SizedBox(height: 20),
-              //Enter Email Address here button
-              MyTextField(
-                controller: fullNameController,
-                hintText: "Enter Full Name",
-                obscureText: false,
-              ),
+              // //Spacing
+              // SizedBox(height: 20),
+              // //Enter Email Address here button
+              // MyTextField(
+              //   controller: confirmPasswordController,
+              //   hintText: "Confirm Password",
+              //   obscureText: true,
+              // ),
 
               SizedBox(height: 20),
 
@@ -67,6 +67,13 @@ class signupScreen extends StatelessWidget {
                 obscureText: true,
               ),
 
+              SizedBox(height: 20),
+              //Enter Email Address here button
+              MyTextField(
+                controller: confirmPasswordController,
+                hintText: "Confirm Password",
+                obscureText: true,
+              ),
               //Enter Email Address here button
 
               // MyTextField(

@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/screens/homescreen/spanHomePage.dart';
 import 'package:flutter_application_1/screens/ssnintro/ssnintro.dart';
@@ -5,11 +6,108 @@ import 'package:flutter_application_1/utils/constants/colors.dart';
 import 'package:flutter_application_1/utils/constants/styles.dart';
 import 'package:flutter_application_1/utils/themes/button_dart.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   LoginScreen({Key? key}) : super(key: key);
 
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
   final emailAddressController = TextEditingController();
+
   final passwordController = TextEditingController();
+
+  // void signUserIn() async {
+  //   // show loading circle
+  //   showDialog(
+  //     context: context,
+  //     builder: (context) {
+  //       return const Center(
+  //         child: CircularProgressIndicator(),
+  //       );
+  //     },
+  //   );
+
+  // await FirebaseAuth.instance.signInWithEmailAndPassword(
+  //     email: emailAddressController.text, password: passwordController.text);
+
+  // // pop the loading circle
+  //Navigator.pop(context);
+
+  //}
+  // sign user in method
+  void signUserIn() async {
+    // show loading circle
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const Center(
+          child: CircularProgressIndicator(),
+        );
+      },
+    );
+
+    // try sign in
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailAddressController.text,
+        password: passwordController.text,
+      );
+      // pop the loading circle
+      Navigator.pop(context);
+    } on FirebaseAuthException catch (e) {
+      // pop the loading circle
+      Navigator.pop(context);
+      // WRONG EMAIL
+      if (e.code == 'user-not-found') {
+        // show error to user
+        wrongEmailMessage();
+      }
+
+      // WRONG PASSWORD
+      else if (e.code == 'wrong-password') {
+        // show error to user
+        wrongPasswordMessage();
+      }
+    }
+  }
+
+  // wrong email message popup
+  void wrongEmailMessage() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const AlertDialog(
+          backgroundColor: black,
+          title: Center(
+            child: Text(
+              'Incorrect Email',
+              style: TextStyle(color: white),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  // wrong password message popup
+  void wrongPasswordMessage() {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const AlertDialog(
+          backgroundColor: black,
+          title: Center(
+            child: Text(
+              'Incorrect Password',
+              style: TextStyle(color: white),
+            ),
+          ),
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +159,8 @@ class LoginScreen extends StatelessWidget {
 
               //needs a login button here
               SizedBox(height: 20),
-              loginButton(),
+              //loginButton(),
+              fbLoginButton(onTap: signUserIn),
               SizedBox(height: 25),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),

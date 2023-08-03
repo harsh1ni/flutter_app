@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1095863216109",
+    "project_id": "legalease-backend",
+    "storage_bucket": "legalease-backend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1095863216109:android:40fa20d8d328bda95fa9e4",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1095863216109-00o27chijhemip6sbh21bns9rkgrfshg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3xztinw3HDlf6DC05uxTs2p2G8KPld-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1095863216109-00o27chijhemip6sbh21bns9rkgrfshg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1095863216109-oeit9sk8cpqvdio0c1h7nfqdak4rpo0n.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterApplication1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -622,3 +622,28 @@ class createAccountButton extends StatelessWidget {
     );
   }
 }
+
+//fb button for login/signup
+class fbLoginButton extends StatelessWidget {
+  final Function()? onTap;
+
+  const fbLoginButton({super.key, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        // foregroundColor: darkGrey,
+        // backgroundColor: white,
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 60),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(29),
+          border: Border.all(color: darkGrey), // Set the border color here
+          shape: BoxShape.rectangle,
+        ),
+        child: loginButtonText, // Replace 'Login' with the desired button text
+      ),
+    );
+  }
+}
