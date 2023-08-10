@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/login/loginScreen.dart';
 import 'package:flutter_application_1/screens/helpscreen/helpscreen.dart';
 import 'package:flutter_application_1/screens/homescreen/homePage.dart';
 import 'package:flutter_application_1/screens/homescreen/spanHomePage.dart';
@@ -493,6 +494,181 @@ class spanReviewGuideAgain extends StatelessWidget {
           );
         },
         child: spanReviewGuideText,
+      ),
+    );
+  }
+}
+
+class MyTextField extends StatelessWidget {
+  final controller;
+  final String hintText;
+  final bool obscureText;
+
+  const MyTextField({
+    Key? key,
+    required this.controller,
+    required this.hintText,
+    required this.obscureText,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 25.0),
+      child: TextField(
+        controller: controller,
+        obscureText: obscureText,
+        decoration: InputDecoration(
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.white),
+            borderRadius:
+                BorderRadius.circular(10.0), // Set the border radius here
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.grey.shade400),
+            borderRadius:
+                BorderRadius.circular(10.0), // Set the border radius here
+          ),
+          fillColor: Colors.grey.shade200,
+          filled: true,
+          hintText: hintText,
+          hintStyle: TextStyle(color: Colors.grey[500]),
+        ),
+      ),
+    );
+  }
+}
+
+//By setting the borderRadius property of both enabledBorder and focusedBorder to BorderRadius.circular(10.0), you will get a rounded border for the TextField. You can adjust the value 10.0 to control the roundness of the border.
+
+class SquareTile extends StatelessWidget {
+  final String imagePath;
+  const SquareTile({
+    super.key,
+    required this.imagePath,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.white),
+        borderRadius: BorderRadius.circular(16),
+        color: Colors.grey[200],
+      ),
+      child: Image.asset(
+        imagePath,
+        height: 40,
+      ),
+    );
+  }
+}
+
+class loginButton extends StatelessWidget {
+  const loginButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(29),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          foregroundColor: darkGrey, backgroundColor: white,
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 60),
+          side: const BorderSide(color: darkGrey), // Set the border color here
+          shape: const StadiumBorder(),
+        ),
+        onPressed: () {
+          // Handle button press
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    const homeScreen()), // Replace with the desired screen widget
+          );
+        },
+        child: loginButtonText,
+      ),
+    );
+  }
+}
+
+class createAccountButton extends StatelessWidget {
+  const createAccountButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(29),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          foregroundColor: darkGrey, backgroundColor: white,
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 70),
+          side: const BorderSide(color: darkGrey), // Set the border color here
+          shape: const StadiumBorder(),
+        ),
+        onPressed: () {
+          // Handle button press
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => LoginScreen(
+                      onTap: () {},
+                    )), // Replace with the desired screen widget
+          );
+        },
+        child: createAccountButtonText,
+      ),
+    );
+  }
+}
+
+//fb button for login/signup
+class fbLoginButton extends StatelessWidget {
+  final Function()? onTap;
+
+  const fbLoginButton({super.key, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        // foregroundColor: darkGrey,
+        // backgroundColor: white,
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 60),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(29),
+          border: Border.all(color: darkGrey), // Set the border color here
+          shape: BoxShape.rectangle,
+        ),
+        child: loginButtonText, // Replace 'Login' with the desired button text
+      ),
+    );
+  }
+}
+
+class fbSignUpButton extends StatelessWidget {
+  final Function()? onTap;
+
+  const fbSignUpButton({super.key, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        // foregroundColor: darkGrey,
+        // backgroundColor: white,
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 60),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(29),
+          border: Border.all(color: darkGrey), // Set the border color here
+          shape: BoxShape.rectangle,
+        ),
+        child:
+            createAccountButtonText, // Replace 'Login' with the desired button text
       ),
     );
   }
