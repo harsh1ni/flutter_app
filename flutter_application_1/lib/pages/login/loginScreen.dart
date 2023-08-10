@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/signup/signup.dart';
 import 'package:flutter_application_1/screens/homescreen/spanHomePage.dart';
 import 'package:flutter_application_1/screens/ssnintro/ssnintro.dart';
 import 'package:flutter_application_1/utils/constants/colors.dart';
@@ -268,9 +269,22 @@ class _LoginScreenState extends State<LoginScreen> {
                     'Not a member?',
                     style: TextStyle(color: Colors.grey[700]),
                   ),
-                  const SizedBox(width: 4),
-                  GestureDetector(
-                    onTap: widget.onTap,
+                  const SizedBox(width: 3),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => signUpScreen(
+                            onTap: () {},
+                          ), // Replace with your destination screen widget
+                        ),
+                      );
+                    },
+                    style: TextButton.styleFrom(
+                      primary: Colors.white, // Background color
+                      // Text color
+                    ),
                     child: const Text(
                       'Register now',
                       style: TextStyle(

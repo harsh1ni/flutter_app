@@ -219,6 +219,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/login/loginScreen.dart';
 import 'package:flutter_application_1/screens/homescreen/spanHomePage.dart';
 import 'package:flutter_application_1/screens/ssnintro/ssnintro.dart';
 import 'package:flutter_application_1/utils/constants/colors.dart';
@@ -476,7 +477,7 @@ class _signUpState extends State<signUpScreen> {
                 ],
               ),
 
-              SizedBox(height: 15),
+              SizedBox(height: 11),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -485,9 +486,22 @@ class _signUpState extends State<signUpScreen> {
                     'Already have an account?',
                     style: TextStyle(color: Colors.grey[700]),
                   ),
-                  const SizedBox(width: 4),
-                  GestureDetector(
-                    onTap: widget.onTap,
+                  const SizedBox(width: 3),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => LoginScreen(
+                            onTap: () {},
+                          ), // Replace with your destination screen widget
+                        ),
+                      );
+                    },
+                    style: TextButton.styleFrom(
+                      primary: Colors.white, // Background color
+                      // Text color
+                    ),
                     child: const Text(
                       'Login now',
                       style: TextStyle(
@@ -496,6 +510,16 @@ class _signUpState extends State<signUpScreen> {
                       ),
                     ),
                   ),
+                  // GestureDetector(
+                  //   onTap: widget.onTap,
+                  //   child: const Text(
+                  //     'Login now',
+                  //     style: TextStyle(
+                  //       color: Colors.blue,
+                  //       fontWeight: FontWeight.bold,
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
             ],
